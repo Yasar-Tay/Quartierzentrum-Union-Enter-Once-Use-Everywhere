@@ -1,0 +1,1354 @@
+# Copyright (C) 2026 Freiwilliges Projekt für das Quartierzentrum Union
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Enter Once Sync 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/enter-once-sync\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-24T02:53:14+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: enter-once-sync\n"
+
+#. Plugin Name of the plugin
+#: enter-once-sync.php
+msgid "Enter Once Sync"
+msgstr ""
+
+#. Description of the plugin
+#: enter-once-sync.php
+msgid "Einmal erfassen, überall anzeigen: übernimmt die öffentlichen Veranstaltungen eines Zentrums aus einem veröffentlichten Kalender (ICS) in das Veranstaltungs-Tool und bietet sie als öffentlichen Feed an."
+msgstr ""
+
+#. Author of the plugin
+#: enter-once-sync.php
+msgid "Freiwilliges Projekt für das Quartierzentrum Union"
+msgstr ""
+
+#: enter-once-sync.php:23
+msgid "Enter Once Sync braucht PHP 8.1 oder neuer."
+msgstr ""
+
+#: enter-once-sync.php:33
+msgid "Enter Once Sync ist unvollständig installiert (vendor/autoload.php fehlt)."
+msgstr ""
+
+#: src/WordPress/Admin.php:22
+#: src/WordPress/Admin.php:393
+msgid "Enter Once"
+msgstr ""
+
+#: src/WordPress/Admin.php:28
+#: src/WordPress/Admin.php:386
+msgid "Einstellungen"
+msgstr ""
+
+#: src/WordPress/Admin.php:44
+#: src/WordPress/Admin.php:381
+msgid "Sie haben keine Berechtigung für diese Seite."
+msgstr ""
+
+#: src/WordPress/Admin.php:79
+#, php-format
+msgid "Begriff nicht gefunden: %s. Legen Sie ihn auf der Website an oder ändern Sie die Zuordnung."
+msgstr ""
+
+#: src/WordPress/Admin.php:81
+msgid "Einstellungen gespeichert."
+msgstr ""
+
+#: src/WordPress/Admin.php:110
+msgid "Alle Begriffe wurden gefunden."
+msgstr ""
+
+#: src/WordPress/Admin.php:111
+msgid "Nicht gefunden:"
+msgstr ""
+
+#: src/WordPress/Admin.php:146
+msgid "Nicht übernommen. Dieses Angebot bleibt unverändert."
+msgstr ""
+
+#: src/WordPress/Admin.php:158
+#, php-format
+msgid "«%s» übernommen. Vor dem ersten Schreiben wurde eine Kopie (Revision) gespeichert. Der nächste Abgleich übernimmt Zeit, Status und Themen."
+msgstr ""
+
+#: src/WordPress/Admin.php:173
+#, php-format
+msgid "Übernahme von «%s» rückgängig gemacht: Titel, Text, Status, Felder und Begriffe sind wieder wie vorher. Der Abgleich verändert dieses Angebot nicht mehr."
+msgstr ""
+
+#: src/WordPress/Admin.php:184
+#, php-format
+msgid "Probelauf abgeschlossen: %1$d neu, %2$d geändert, %3$d auf Entwurf, %4$d angehalten (nichts geschrieben)."
+msgstr ""
+
+#: src/WordPress/Admin.php:185
+#, php-format
+msgid "Abgleich abgeschlossen: %1$d neu, %2$d geändert, %3$d auf Entwurf, %4$d angehalten."
+msgstr ""
+
+#: src/WordPress/Admin.php:195
+#: src/WordPress/Admin.php:513
+#, php-format
+msgid "%d Änderungen folgen beim nächsten Abgleich (Zeitbudget erreicht)."
+msgstr ""
+
+#: src/WordPress/Admin.php:198
+msgid "Abgleich nicht ausgeführt."
+msgstr ""
+
+#: src/WordPress/Admin.php:250
+#, php-format
+msgid "Die Kennung «%s» kommt zweimal vor."
+msgstr ""
+
+#: src/WordPress/Admin.php:261
+#, php-format
+msgid "«%s»: Die Kalender-Adresse (ICS) muss mit https:// beginnen. Die bisherige Adresse bleibt."
+msgstr ""
+
+#: src/WordPress/Admin.php:271
+#, php-format
+msgid "«%s»: ungültige E-Mail-Adresse wurde entfernt."
+msgstr ""
+
+#: src/WordPress/Admin.php:385
+msgid "Status"
+msgstr ""
+
+#: src/WordPress/Admin.php:387
+#: src/WordPress/Admin.php:642
+msgid "Feldzuordnung"
+msgstr ""
+
+#: src/WordPress/Admin.php:388
+msgid "Bestehende Angebote übernehmen"
+msgstr ""
+
+#: src/WordPress/Admin.php:430
+msgid "Neu"
+msgstr ""
+
+#: src/WordPress/Admin.php:431
+msgid "Ändern"
+msgstr ""
+
+#: src/WordPress/Admin.php:432
+msgid "Auf Entwurf setzen"
+msgstr ""
+
+#: src/WordPress/Admin.php:433
+msgid "Angehalten"
+msgstr ""
+
+#: src/WordPress/Admin.php:434
+msgid "Unverändert"
+msgstr ""
+
+#: src/WordPress/Admin.php:441
+msgid "neu im Kalender"
+msgstr ""
+
+#: src/WordPress/Admin.php:442
+msgid "im Kalender geändert"
+msgstr ""
+
+#: src/WordPress/Admin.php:443
+msgid "wieder im Kalender"
+msgstr ""
+
+#: src/WordPress/Admin.php:444
+msgid "neue Serie, bestehender Entwurf wird weiterverwendet"
+msgstr ""
+
+#: src/WordPress/Admin.php:445
+msgid "fehlt im Kalender"
+msgstr ""
+
+#: src/WordPress/Admin.php:446
+#: src/WordPress/FieldWizard.php:104
+msgid "abgesagt"
+msgstr ""
+
+#: src/WordPress/Admin.php:447
+msgid "Serie beendet"
+msgstr ""
+
+#: src/WordPress/Admin.php:448
+msgid "fehlt im Kalender (Sicherheitsabstand)"
+msgstr ""
+
+#: src/WordPress/Admin.php:459
+msgid "Die Feldzuordnung ist noch nicht geprüft. Bis dahin läuft jeder Abgleich als Probelauf und schreibt nichts."
+msgstr ""
+
+#: src/WordPress/Admin.php:459
+msgid "Zur Feldzuordnung"
+msgstr ""
+
+#: src/WordPress/Admin.php:462
+#: src/WordPress/Admin.php:756
+#: src/WordPress/Cli.php:156
+msgid "Noch kein Zentrum eingerichtet."
+msgstr ""
+
+#: src/WordPress/Admin.php:462
+msgid "Zu den Einstellungen"
+msgstr ""
+
+#: src/WordPress/Admin.php:469
+#, php-format
+msgid "Veraltet: seit mehr als %d Minuten kein erfolgreicher Abgleich."
+msgstr ""
+
+#: src/WordPress/Admin.php:472
+msgid "Letzter Fehler:"
+msgstr ""
+
+#: src/WordPress/Admin.php:477
+#: src/WordPress/Admin.php:596
+msgid "Kalender-Adresse (ICS)"
+msgstr ""
+
+#: src/WordPress/Admin.php:478
+#: src/WordPress/Admin.php:597
+msgid "Zentrum auf der Verbands-Website"
+msgstr ""
+
+#: src/WordPress/Admin.php:479
+#: src/WordPress/Admin.php:599
+msgid "Zentrum aktiv"
+msgstr ""
+
+#: src/WordPress/Admin.php:479
+msgid "Ja"
+msgstr ""
+
+#: src/WordPress/Admin.php:479
+msgid "Nein"
+msgstr ""
+
+#: src/WordPress/Admin.php:480
+#: src/WordPress/Admin.php:600
+msgid "Probelauf"
+msgstr ""
+
+#: src/WordPress/Admin.php:480
+msgid "Ein – es wird nichts geschrieben"
+msgstr ""
+
+#: src/WordPress/Admin.php:480
+#: src/WordPress/Admin.php:483
+msgid "Aus"
+msgstr ""
+
+#: src/WordPress/Admin.php:481
+msgid "Letzter Abgleich"
+msgstr ""
+
+#: src/WordPress/Admin.php:482
+msgid "Letzter erfolgreicher Abgleich"
+msgstr ""
+
+#: src/WordPress/Admin.php:483
+#: src/WordPress/Admin.php:655
+#: src/WordPress/Admin.php:656
+msgid "Öffentlicher Feed"
+msgstr ""
+
+#: src/WordPress/Admin.php:487
+msgid "Termine im Vorschau-Zeitraum"
+msgstr ""
+
+#: src/WordPress/Admin.php:488
+msgid "Abgesagte Termine"
+msgstr ""
+
+#: src/WordPress/Admin.php:489
+msgid "Interne Einträge verworfen"
+msgstr ""
+
+#: src/WordPress/Admin.php:496
+msgid "Jetzt abgleichen"
+msgstr ""
+
+#: src/WordPress/Admin.php:500
+#, php-format
+msgid "Abgleich angehalten: %d Einträge würden auf einmal entfernt. Das ist mehr als die Obergrenze."
+msgstr ""
+
+#: src/WordPress/Admin.php:504
+msgid "Trotzdem anwenden"
+msgstr ""
+
+#: src/WordPress/Admin.php:507
+#, php-format
+msgid "Begriff nicht gefunden: %s"
+msgstr ""
+
+#: src/WordPress/Admin.php:516
+msgid "Braucht eine Person:"
+msgstr ""
+
+#: src/WordPress/Admin.php:520
+msgid "Geplante Aktionen (Probelauf)"
+msgstr ""
+
+#: src/WordPress/Admin.php:520
+msgid "Änderungen des letzten Abgleichs"
+msgstr ""
+
+#: src/WordPress/Admin.php:522
+msgid "Keine Änderungen."
+msgstr ""
+
+#: src/WordPress/Admin.php:524
+msgid "Aktion"
+msgstr ""
+
+#: src/WordPress/Admin.php:524
+msgid "Art"
+msgstr ""
+
+#: src/WordPress/Admin.php:524
+#: src/WordPress/Admin.php:737
+#: src/WordPress/Adoption.php:145
+msgid "Titel"
+msgstr ""
+
+#: src/WordPress/Admin.php:524
+msgid "Wann"
+msgstr ""
+
+#: src/WordPress/Admin.php:524
+msgid "Grund"
+msgstr ""
+
+#: src/WordPress/Admin.php:526
+#: src/WordPress/FieldWizard.php:102
+msgid "Wöchentliches Angebot"
+msgstr ""
+
+#: src/WordPress/Admin.php:526
+msgid "Veranstaltung"
+msgstr ""
+
+#: src/WordPress/Admin.php:535
+msgid "Warnungen und Hinweise"
+msgstr ""
+
+#: src/WordPress/Admin.php:538
+msgid "Warnung"
+msgstr ""
+
+#: src/WordPress/Admin.php:538
+msgid "Hinweis"
+msgstr ""
+
+#: src/WordPress/Admin.php:544
+#, php-format
+msgid "Nächster automatischer Abgleich (WordPress-Zeitplaner): %s"
+msgstr ""
+
+#: src/WordPress/Admin.php:545
+msgid "Kann der Server einen Zeitplaner-Eintrag ausführen, ist diese Zeile zuverlässiger:"
+msgstr ""
+
+#: src/WordPress/Admin.php:551
+msgid "noch nie"
+msgstr ""
+
+#: src/WordPress/Admin.php:575
+msgid "– bitte wählen –"
+msgstr ""
+
+#: src/WordPress/Admin.php:584
+#: src/WordPress/Adoption.php:152
+msgid "Zentren"
+msgstr ""
+
+#: src/WordPress/Admin.php:590
+msgid "Neues Zentrum hinzufügen"
+msgstr ""
+
+#: src/WordPress/Admin.php:591
+msgid "Kennung"
+msgstr ""
+
+#: src/WordPress/Admin.php:591
+msgid "Kurz, ohne Leerzeichen, z. B. union. Wird im Feed verwendet und kann später nicht geändert werden."
+msgstr ""
+
+#: src/WordPress/Admin.php:592
+msgid "Name des Zentrums"
+msgstr ""
+
+#: src/WordPress/Admin.php:593
+#, php-format
+msgid "Gespeichert: %s. Leer lassen, um die Adresse zu behalten."
+msgstr ""
+
+#: src/WordPress/Admin.php:593
+msgid "Geheim: wird nur hier gezeigt und nie protokolliert."
+msgstr ""
+
+#: src/WordPress/Admin.php:595
+msgid "Anzeigen"
+msgstr ""
+
+#: src/WordPress/Admin.php:595
+msgid "Adresse löschen"
+msgstr ""
+
+#: src/WordPress/Admin.php:598
+#: src/WordPress/Admin.php:661
+msgid "Benachrichtigung"
+msgstr ""
+
+#: src/WordPress/Admin.php:598
+msgid "Eine E-Mail-Adresse pro Zeile. Leer: die Adresse der Website-Administration."
+msgstr ""
+
+#: src/WordPress/Admin.php:599
+msgid "Automatisch abgleichen"
+msgstr ""
+
+#: src/WordPress/Admin.php:600
+msgid "Nur zeigen, was geändert würde; nichts schreiben"
+msgstr ""
+
+#: src/WordPress/Admin.php:600
+msgid "Solange die Feldzuordnung nicht geprüft ist, gilt der Probelauf immer."
+msgstr ""
+
+#: src/WordPress/Admin.php:602
+msgid "Entfernen"
+msgstr ""
+
+#: src/WordPress/Admin.php:602
+msgid "Dieses Zentrum aus den Einstellungen entfernen (Einträge auf der Website bleiben)"
+msgstr ""
+
+#: src/WordPress/Admin.php:607
+msgid "Abgleich"
+msgstr ""
+
+#: src/WordPress/Admin.php:608
+msgid "Abgleich-Abstand (Minuten)"
+msgstr ""
+
+#: src/WordPress/Admin.php:609
+msgid "Warnung «veraltet» nach (Minuten)"
+msgstr ""
+
+#: src/WordPress/Admin.php:610
+msgid "Vorschau-Zeitraum (Monate)"
+msgstr ""
+
+#: src/WordPress/Admin.php:611
+msgid "Sicherheitsabstand (Abgleiche)"
+msgstr ""
+
+#: src/WordPress/Admin.php:611
+msgid "So oft hintereinander muss eine Veranstaltung im Kalender fehlen, bevor sie auf «Entwurf» gesetzt wird."
+msgstr ""
+
+#: src/WordPress/Admin.php:612
+msgid "Obergrenze (Entfernungen pro Abgleich)"
+msgstr ""
+
+#: src/WordPress/Admin.php:612
+msgid "Würden mehr Einträge auf einmal entfernt, wird keiner entfernt und eine E-Mail verschickt."
+msgstr ""
+
+#: src/WordPress/Admin.php:615
+msgid "Kennzeichen"
+msgstr ""
+
+#: src/WordPress/Admin.php:616
+msgid "Interne Einträge"
+msgstr ""
+
+#: src/WordPress/Admin.php:616
+msgid "Nicht öffentlich markierte Einträge verwerfen"
+msgstr ""
+
+#: src/WordPress/Admin.php:616
+msgid "Kategorien, die einen Eintrag als intern kennzeichnen, eine pro Zeile."
+msgstr ""
+
+#: src/WordPress/Admin.php:617
+msgid "Abgesagt-Kennzeichen"
+msgstr ""
+
+#: src/WordPress/Admin.php:617
+msgid "Beginnt ein Titel mit einem dieser Wörter, gilt die Veranstaltung als abgesagt. Ein Wort pro Zeile."
+msgstr ""
+
+#: src/WordPress/Admin.php:618
+msgid "Abgesagte Veranstaltungen"
+msgstr ""
+
+#: src/WordPress/Admin.php:618
+msgid "Ausblenden (Entwurf)"
+msgstr ""
+
+#: src/WordPress/Admin.php:618
+msgid "Mit Vermerk ‹abgesagt› anzeigen"
+msgstr ""
+
+#: src/WordPress/Admin.php:621
+msgid "Wöchentliche Angebote"
+msgstr ""
+
+#: src/WordPress/Admin.php:622
+msgid "Wöchentliche Termine"
+msgstr ""
+
+#: src/WordPress/Admin.php:622
+msgid "Als Wöchentliches Angebot"
+msgstr ""
+
+#: src/WordPress/Admin.php:622
+msgid "Jeder Termin einzeln"
+msgstr ""
+
+#: src/WordPress/Admin.php:623
+msgid "Mindestanzahl Termine einer Serie"
+msgstr ""
+
+#: src/WordPress/Admin.php:624
+msgid "Vorlauf für Wöchentliche Angebote (Tage)"
+msgstr ""
+
+#: src/WordPress/Admin.php:625
+msgid "Hinweis bei verschobenem Termin"
+msgstr ""
+
+#: src/WordPress/Admin.php:625
+msgid "Oben im Text des Angebots anzeigen"
+msgstr ""
+
+#: src/WordPress/Admin.php:628
+msgid "Zuordnung"
+msgstr ""
+
+#: src/WordPress/Admin.php:629
+msgid "Zuordnung Kategorien"
+msgstr ""
+
+#: src/WordPress/Admin.php:629
+msgid "Eine Zeile pro Kategorie: «Kalender = Thema; Thema». «Kalender = –» heisst: nicht übertragen."
+msgstr ""
+
+#: src/WordPress/Admin.php:630
+msgid "Zuordnung Zielgruppen"
+msgstr ""
+
+#: src/WordPress/Admin.php:630
+msgid "Eine Zeile pro Tag: «Kalender = Zielgruppe; Zielgruppe». «Kalender = –» heisst: nicht übertragen."
+msgstr ""
+
+#: src/WordPress/Admin.php:635
+msgid "Schreibvarianten (Synonyme)"
+msgstr ""
+
+#: src/WordPress/Admin.php:635
+msgid "«Variante = Kalenderwert», z. B. «Familien = Familie»."
+msgstr ""
+
+#: src/WordPress/Admin.php:638
+msgid "Website des Verbands"
+msgstr ""
+
+#: src/WordPress/Admin.php:639
+msgid "Sprache (WPML)"
+msgstr ""
+
+#: src/WordPress/Admin.php:639
+msgid "Nur Standardsprache"
+msgstr ""
+
+#: src/WordPress/Admin.php:639
+msgid "In alle Sprachen duplizieren"
+msgstr ""
+
+#: src/WordPress/Admin.php:639
+msgid "WPML ist auf dieser Website nicht aktiv; die Einstellung hat keine Wirkung."
+msgstr ""
+
+#: src/WordPress/Admin.php:640
+#: src/WordPress/Admin.php:835
+msgid "Text der Website behalten"
+msgstr ""
+
+#: src/WordPress/Admin.php:640
+msgid "Voreinstellung beim Übernehmen bestehender Angebote"
+msgstr ""
+
+#: src/WordPress/Admin.php:641
+msgid "geprüft"
+msgstr ""
+
+#: src/WordPress/Admin.php:641
+msgid "nicht geprüft"
+msgstr ""
+
+#: src/WordPress/Admin.php:642
+msgid "Zum Assistenten"
+msgstr ""
+
+#: src/WordPress/Admin.php:645
+#: src/WordPress/Admin.php:646
+msgid "Bilder"
+msgstr ""
+
+#: src/WordPress/Admin.php:646
+msgid "Aus der Medienbibliothek"
+msgstr ""
+
+#: src/WordPress/Admin.php:646
+msgid "Ein Bild gilt für ein Zentrum, wenn bei «Medien» im Feld «Zentrum (Enter Once)» das Zentrum gewählt ist. Der Dateiname entspricht dem Titel, z. B. Offener_Deutschtreff.jpg."
+msgstr ""
+
+#: src/WordPress/Admin.php:651
+msgid "Kategoriebilder"
+msgstr ""
+
+#: src/WordPress/Admin.php:651
+msgid "«Kategorie = Bild-ID» pro Zeile. Die Bild-ID steht in der Medienbibliothek in der Adresse des Bildes."
+msgstr ""
+
+#: src/WordPress/Admin.php:652
+msgid "Standardbild (Bild-ID)"
+msgstr ""
+
+#: src/WordPress/Admin.php:656
+#: src/WordPress/Admin.php:666
+msgid "Eingeschaltet"
+msgstr ""
+
+#: src/WordPress/Admin.php:657
+msgid "Erlaubte Websites für den Feed"
+msgstr ""
+
+#: src/WordPress/Admin.php:657
+msgid "«*» heisst: alle. Sonst eine Adresse pro Zeile, z. B. https://www.union-basel.ch"
+msgstr ""
+
+#: src/WordPress/Admin.php:658
+msgid "Zwischenspeicher des Feeds (Sekunden)"
+msgstr ""
+
+#: src/WordPress/Admin.php:662
+msgid "Häufigkeit"
+msgstr ""
+
+#: src/WordPress/Admin.php:662
+msgid "täglich"
+msgstr ""
+
+#: src/WordPress/Admin.php:662
+msgid "bei jedem Abgleich"
+msgstr ""
+
+#: src/WordPress/Admin.php:662
+msgid "wöchentlich"
+msgstr ""
+
+#: src/WordPress/Admin.php:662
+msgid "Gilt für die Zusammenfassung. Fehler und angehaltene Abgleiche werden immer sofort gemeldet, derselbe Fehler höchstens einmal pro Tag."
+msgstr ""
+
+#: src/WordPress/Admin.php:665
+#: src/WordPress/Admin.php:666
+msgid "KI-Funktionen"
+msgstr ""
+
+#: src/WordPress/Admin.php:666
+msgid "In dieser Version nicht enthalten. Ohne KI arbeitet der Abgleich genau gleich."
+msgstr ""
+
+#: src/WordPress/Admin.php:669
+msgid "Einstellungen speichern"
+msgstr ""
+
+#: src/WordPress/Admin.php:671
+msgid "Begriffe neu zuordnen"
+msgstr ""
+
+#: src/WordPress/Admin.php:681
+msgid "Der Assistent lernt, wie das Veranstaltungs-Tool seine Felder speichert. Sie ändern im Bearbeitungsbildschirm des Tools jeweils genau einen Wert und speichern; der Assistent vergleicht vorher und nachher. Das dauert rund eine halbe Stunde und ist Arbeit für die Entwicklerin oder den Entwickler des Tools oder eine technisch versierte Administratorin."
+msgstr ""
+
+#: src/WordPress/Admin.php:682
+msgid "Der Assistent kann nur Felder lernen, die das Tool als gewöhnliche Beitragsfelder (Post-Meta) speichert. Speichert das Tool ein Feld anders, etwa in einer eigenen Tabelle, braucht es die Entwicklerin oder den Entwickler des Tools."
+msgstr ""
+
+#: src/WordPress/Admin.php:683
+msgid "Stand:"
+msgstr ""
+
+#: src/WordPress/Admin.php:683
+msgid "Feldzuordnung geprüft."
+msgstr ""
+
+#: src/WordPress/Admin.php:683
+msgid "Feldzuordnung nicht geprüft – jeder Abgleich ist ein Probelauf."
+msgstr ""
+
+#: src/WordPress/Admin.php:691
+msgid "nicht vorhanden"
+msgstr ""
+
+#: src/WordPress/Admin.php:691
+#, php-format
+msgid "gespeichert als %s"
+msgstr ""
+
+#: src/WordPress/Admin.php:698
+msgid "Entwurf gespeichert – weiter"
+msgstr ""
+
+#: src/WordPress/Admin.php:701
+msgid "Lernentwurf öffnen"
+msgstr ""
+
+#: src/WordPress/Admin.php:703
+msgid "Gespeichert – vergleichen"
+msgstr ""
+
+#: src/WordPress/Admin.php:705
+msgid "Dieses Feld gibt es nicht"
+msgstr ""
+
+#: src/WordPress/Admin.php:708
+msgid "Ausgangszustand neu erfassen"
+msgstr ""
+
+#: src/WordPress/Admin.php:711
+msgid "Prüfentwurf anlegen"
+msgstr ""
+
+#: src/WordPress/Admin.php:714
+msgid "Im Bearbeitungsbildschirm öffnen"
+msgstr ""
+
+#: src/WordPress/Admin.php:715
+msgid "Vorschau öffnen"
+msgstr ""
+
+#: src/WordPress/Admin.php:716
+msgid "Im Prüfentwurf muss stehen:"
+msgstr ""
+
+#: src/WordPress/Admin.php:716
+msgid "Erwartet"
+msgstr ""
+
+#: src/WordPress/Admin.php:716
+msgid "Gelesen"
+msgstr ""
+
+#: src/WordPress/Admin.php:716
+msgid "Selbstprüfung"
+msgstr ""
+
+#: src/WordPress/Admin.php:722
+msgid "ein"
+msgstr ""
+
+#: src/WordPress/Admin.php:722
+msgid "aus"
+msgstr ""
+
+#: src/WordPress/Admin.php:735
+msgid "gelesen wie geschrieben"
+msgstr ""
+
+#: src/WordPress/Admin.php:735
+msgid "abweichend"
+msgstr ""
+
+#: src/WordPress/Admin.php:740
+msgid "Alles stimmt – Zuordnung bestätigen"
+msgstr ""
+
+#: src/WordPress/Admin.php:742
+msgid "Die Selbstprüfung zeigt Abweichungen. Die Zuordnung kann so nicht bestätigt werden. Klicken Sie auf «Neu lernen» und gehen Sie die Schritte noch einmal durch."
+msgstr ""
+
+#: src/WordPress/Admin.php:747
+msgid "Neu lernen"
+msgstr ""
+
+#: src/WordPress/Admin.php:772
+msgid "Hier verbinden Sie von Hand erfasste Wöchentliche Angebote mit einer Serie aus dem Kalender. Das Plugin schlägt Serien mit gleichem Wochentag und überlappender Zeit vor, verbindet aber nie von selbst. Nicht verbundene Angebote bleiben für immer unverändert."
+msgstr ""
+
+#: src/WordPress/Admin.php:774
+msgid "Zuerst die Feldzuordnung lernen; ohne sie lassen sich Wöchentliche Angebote nicht erkennen."
+msgstr ""
+
+#: src/WordPress/Admin.php:780
+msgid "Noch keine Serien bekannt. Führen Sie zuerst einen Abgleich aus (ein Probelauf genügt)."
+msgstr ""
+
+#: src/WordPress/Admin.php:791
+#, php-format
+msgid "Vergleich: «%1$s» und «%2$s»"
+msgstr ""
+
+#: src/WordPress/Admin.php:792
+msgid "Website"
+msgstr ""
+
+#: src/WordPress/Admin.php:792
+msgid "Kalender"
+msgstr ""
+
+#: src/WordPress/Admin.php:792
+msgid "Nach der Übernahme"
+msgstr ""
+
+#: src/WordPress/Admin.php:794
+msgid "gleich"
+msgstr ""
+
+#: src/WordPress/Admin.php:794
+msgid "bleibt wie auf der Website"
+msgstr ""
+
+#: src/WordPress/Admin.php:794
+msgid "wird aus dem Kalender übernommen"
+msgstr ""
+
+#: src/WordPress/Admin.php:806
+#, php-format
+msgid "Dieses Angebot ist zurzeit nicht veröffentlicht («%s»). Es behält diesen Status, ausser Sie wählen:"
+msgstr ""
+
+#: src/WordPress/Admin.php:807
+msgid "Mit dem nächsten Abgleich veröffentlichen"
+msgstr ""
+
+#: src/WordPress/Admin.php:809
+msgid "Übernehmen"
+msgstr ""
+
+#: src/WordPress/Admin.php:810
+msgid "Abbrechen"
+msgstr ""
+
+#: src/WordPress/Admin.php:815
+msgid "Wöchentliche Angebote auf der Website"
+msgstr ""
+
+#: src/WordPress/Admin.php:818
+msgid "Keine nicht übernommenen Wöchentlichen Angebote gefunden."
+msgstr ""
+
+#: src/WordPress/Admin.php:827
+msgid "Nicht übernehmen"
+msgstr ""
+
+#: src/WordPress/Admin.php:833
+msgid "Keine Serie mit gleichem Wochentag und überlappender Zeit."
+msgstr ""
+
+#: src/WordPress/Admin.php:836
+msgid "Vergleich anzeigen"
+msgstr ""
+
+#: src/WordPress/Admin.php:841
+msgid "Übernommene Angebote"
+msgstr ""
+
+#: src/WordPress/Admin.php:843
+#, php-format
+msgid "übernommen am %s"
+msgstr ""
+
+#: src/WordPress/Admin.php:844
+msgid "Übernahme rückgängig machen"
+msgstr ""
+
+#: src/WordPress/Adoption.php:146
+msgid "Text"
+msgstr ""
+
+#: src/WordPress/Adoption.php:147
+#: src/WordPress/FieldWizard.php:103
+msgid "Wochentag"
+msgstr ""
+
+#: src/WordPress/Adoption.php:148
+#: src/WordPress/FieldWizard.php:100
+msgid "Beginn"
+msgstr ""
+
+#: src/WordPress/Adoption.php:149
+#: src/WordPress/FieldWizard.php:101
+msgid "Ende"
+msgstr ""
+
+#: src/WordPress/Adoption.php:150
+msgid "Themen"
+msgstr ""
+
+#: src/WordPress/Adoption.php:151
+msgid "Zielgruppen"
+msgstr ""
+
+#: src/WordPress/Adoption.php:152
+msgid "(wird ergänzt; andere Zentren bleiben)"
+msgstr ""
+
+#: src/WordPress/Adoption.php:171
+msgid "Eintrag nicht gefunden."
+msgstr ""
+
+#: src/WordPress/Adoption.php:174
+msgid "Dieses Angebot ist bereits übernommen."
+msgstr ""
+
+#: src/WordPress/Adoption.php:183
+msgid "Diese Serie ist nicht verfügbar oder bereits mit einem anderen Angebot verbunden."
+msgstr ""
+
+#: src/WordPress/Adoption.php:192
+msgid "Wochentag oder Zeit passen nicht zu dieser Serie."
+msgstr ""
+
+#: src/WordPress/Adoption.php:272
+msgid "Für diesen Eintrag gibt es keine Kopie von vor der Übernahme."
+msgstr ""
+
+#: src/WordPress/Cli.php:114
+msgid "Bitte das Zentrum angeben: --source=<Kennung>."
+msgstr ""
+
+#: src/WordPress/Cli.php:118
+msgid "Bitte den Fingerabdruck der angehaltenen Liste angeben: --release-held=<Fingerabdruck>. «wp enteronce held» zeigt die Liste und ihren Fingerabdruck. Es wurde nichts entfernt."
+msgstr ""
+
+#: src/WordPress/Cli.php:126
+msgid "Neuer Fingerabdruck: «wp enteronce held»."
+msgstr ""
+
+#: src/WordPress/Cli.php:130
+msgid "Kein Eintrag entfernt: der Abgleich ist weiterhin angehalten."
+msgstr ""
+
+#: src/WordPress/Cli.php:131
+#, php-format
+msgid "Angehaltene Liste angewendet: %d Einträge auf Entwurf gesetzt."
+msgstr ""
+
+#: src/WordPress/Cli.php:164
+#, php-format
+msgid "%s: kein angehaltener Abgleich."
+msgstr ""
+
+#: src/WordPress/Cli.php:168
+#, php-format
+msgid "%1$s: Abgleich angehalten, %2$d Einträge würden entfernt:"
+msgstr ""
+
+#: src/WordPress/Cli.php:172
+#, php-format
+msgid "Fingerabdruck: %s"
+msgstr ""
+
+#: src/WordPress/Cli.php:173
+#, php-format
+msgid "Anwenden: wp enteronce sync --source=%1$s --release-held=%2$s"
+msgstr ""
+
+#: src/WordPress/EditNotice.php:31
+msgid "Dieser Eintrag kommt aus dem Kalender (Enter Once). Datum, Zeiten und Status werden beim nächsten Abgleich überschrieben, Themen und Zielgruppen nur, wenn der Kalender welche angibt. Titel und Text der Website bleiben erhalten."
+msgstr ""
+
+#: src/WordPress/EditNotice.php:32
+msgid "Dieser Eintrag kommt aus dem Kalender (Enter Once). Änderungen hier werden beim nächsten Abgleich überschrieben. Ändern Sie die Veranstaltung im Kalender. Ein hier gesetztes Beitragsbild bleibt erhalten."
+msgstr ""
+
+#: src/WordPress/EventAdapter.php:167
+#, php-format
+msgid "«%s» liegt im Papierkorb und wird deshalb nicht mehr abgeglichen. Bitte wiederherstellen oder endgültig löschen."
+msgstr ""
+
+#: src/WordPress/EventAdapter.php:168
+#, php-format
+msgid "«%s» ist privat gestellt und wird deshalb nicht verändert."
+msgstr ""
+
+#: src/WordPress/EventAdapter.php:169
+#, php-format
+msgid "«%s» wartet auf Freigabe und wird deshalb nicht verändert."
+msgstr ""
+
+#: src/WordPress/EventAdapter.php:170
+#, php-format
+msgid "«%s» ist zur Veröffentlichung geplant und wird deshalb nicht verändert."
+msgstr ""
+
+#: src/WordPress/FeedController.php:51
+msgid "Der öffentliche Feed ist ausgeschaltet."
+msgstr ""
+
+#: src/WordPress/FeedController.php:56
+#: src/WordPress/Runner.php:64
+msgid "Unbekanntes Zentrum."
+msgstr ""
+
+#: src/WordPress/FeedController.php:83
+msgid "Ungültiger Zeitraum."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:40
+msgid "Lässt sich dieser Schritt auch nach «Ausgangszustand neu erfassen» nicht lernen, speichert das Tool das Feld vermutlich nicht als gewöhnliches Beitragsfeld (Post-Meta). Dann braucht es die Entwicklerin oder den Entwickler des Tools."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:79
+#, php-format
+msgid "Legen Sie im Veranstaltungs-Tool eine neue Veranstaltung an. Titel: «%s». Füllen Sie sonst nichts aus, lassen Sie alle Schalter aus, und speichern Sie sie als Entwurf. Klicken Sie dann auf «Entwurf gespeichert – weiter»."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:80
+msgid "Speichern Sie den Lernentwurf im Bearbeitungsbildschirm noch einmal, ohne etwas zu ändern. So erkennt der Assistent Felder, die andere Plugins bei jedem Speichern selbst ändern; diese Felder werden danach nicht beachtet."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:81
+msgid "Setzen Sie im Lernentwurf das Datum auf den 23.04.2031 und speichern Sie. Ändern Sie nichts anderes."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:82
+msgid "Setzen Sie den Beginn auf 07:45 Uhr und speichern Sie."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:83
+msgid "Setzen Sie das Ende auf 09:05 Uhr und speichern Sie."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:84
+msgid "Schalten Sie «Wöchentliches Angebot» ein und speichern Sie."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:85
+msgid "Wählen Sie als Wochentag «Sonntag» und speichern Sie. Hat das Tool kein Feld für den Wochentag, klicken Sie auf «Dieses Feld gibt es nicht»."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:86
+msgid "Schalten Sie «abgesagt» ein und speichern Sie."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:87
+msgid "Schalten Sie «abgesagt» wieder aus, schalten Sie «Ferienpause» ein und speichern Sie."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:88
+#, php-format
+msgid "Schreiben Sie in das Feld «Organisation und Information» nur den Text «%s» und speichern Sie. Gibt es dieses Feld nicht, klicken Sie auf «Dieses Feld gibt es nicht»."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:89
+#, php-format
+msgid "Hat das Tool ein Feld für den Raum? Dann schreiben Sie dort «%s» und speichern Sie. Sonst klicken Sie auf «Dieses Feld gibt es nicht»."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:90
+msgid "Alle Felder sind gelernt. Klicken Sie auf «Prüfentwurf anlegen». Öffnen Sie den Prüfentwurf danach im Bearbeitungsbildschirm des Tools und in der Vorschau, und vergleichen Sie mit der Liste unten."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:91
+msgid "Die Feldzuordnung ist geprüft. Der Abgleich darf jetzt schreiben, sobald der Probelauf des Zentrums ausgeschaltet ist."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:99
+msgid "Datum"
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:105
+msgid "Ferienpause"
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:106
+msgid "Organisation und Information"
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:107
+msgid "Raum"
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:136
+#, php-format
+msgid "Kein Entwurf mit dem Titel «%s» gefunden. Bitte zuerst im Veranstaltungs-Tool anlegen und als Entwurf speichern."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:144
+#, php-format
+msgid "Lernentwurf gefunden (ID %d). Alle gespeicherten Felder wurden erfasst."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:162
+msgid "Zweiter Ausgangszustand erfasst. Keine Felder ändern sich von selbst."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:163
+#, php-format
+msgid "Zweiter Ausgangszustand erfasst. Diese Felder ändern sich bei jedem Speichern von selbst und werden nicht beachtet: %s"
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:170
+msgid "Der Assistent ist nicht bei einem Feldschritt. Bitte neu beginnen."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:177
+msgid "Seit dem letzten Schritt hat sich kein gespeichertes Feld verändert. Haben Sie im Bearbeitungsbildschirm gespeichert?"
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:197
+#, php-format
+msgid "Das geänderte Feld %1$s ist bereits als «%2$s» gelernt. Vermutlich wurde der falsche Wert geändert. Stellen Sie «%2$s» zurück, klicken Sie auf «Ausgangszustand neu erfassen» und ändern Sie nur «%3$s»."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:207
+#, php-format
+msgid "«%s» gelernt."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:217
+msgid "Dieses Feld ist nötig und kann nicht übersprungen werden."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:219
+#, php-format
+msgid "«%s»: im Tool nicht vorhanden."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:229
+msgid "Der Lernentwurf existiert nicht mehr. Bitte neu beginnen."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:232
+msgid "Ausgangszustand neu erfasst. Ändern Sie jetzt nur den verlangten Wert."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:260
+msgid "Dieser Entwurf wurde vom Enter-Once-Assistenten geschrieben. Er dient nur der Prüfung der Feldzuordnung und wird nach der Bestätigung in den Papierkorb gelegt."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:284
+msgid "Prüfentwurf angelegt. Bitte im Tool öffnen und prüfen."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:369
+msgid "Bitte zuerst den Prüfentwurf anlegen und prüfen."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:373
+msgid "Die Feldzuordnung ist unvollständig."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:378
+msgid "Der Prüfentwurf existiert nicht mehr. Bitte legen Sie ihn neu an."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:381
+msgid "Die Selbstprüfung zeigt Abweichungen. Die Zuordnung kann so nicht bestätigt werden. Klicken Sie auf «Neu lernen»."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:390
+msgid "Feldzuordnung bestätigt. Lern- und Prüfentwurf liegen im Papierkorb."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:491
+msgid "Kein geändertes Feld enthält den verlangten Wert in einem bekannten Format."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:515
+#, php-format
+msgid "Kein geändertes Feld enthält den Text «%s»."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:516
+#, php-format
+msgid "Mehrere Felder enthalten den Text «%s»."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:529
+msgid "Es hat sich mehr als ein Feld verändert. Bitte nur den einen Schalter umstellen."
+msgstr ""
+
+#: src/WordPress/FieldWizard.php:555
+msgid "Geänderte Felder:"
+msgstr ""
+
+#. translators: %s: technical reason
+#: src/WordPress/HttpFetcher.php:47
+#, php-format
+msgid "Der Kalender konnte nicht heruntergeladen werden (%s)."
+msgstr ""
+
+#. translators: %d: HTTP status code
+#: src/WordPress/HttpFetcher.php:63
+#, php-format
+msgid "Der Kalender-Server hat mit Status %d geantwortet."
+msgstr ""
+
+#: src/WordPress/HttpFetcher.php:70
+#, php-format
+msgid "Die Kalenderdatei ist grösser als %d MB und wird nicht gelesen."
+msgstr ""
+
+#: src/WordPress/HttpFetcher.php:76
+msgid "Der Kalender-Server leitet zu oft oder ohne Ziel weiter."
+msgstr ""
+
+#: src/WordPress/HttpFetcher.php:92
+msgid "Für dieses Zentrum ist keine Kalender-Adresse (ICS) eingetragen."
+msgstr ""
+
+#: src/WordPress/HttpFetcher.php:96
+msgid "Die Kalender-Adresse (ICS) muss mit https:// beginnen und darf nicht auf ein internes Netz zeigen."
+msgstr ""
+
+#: src/WordPress/Images.php:135
+msgid "– keinem Zentrum –"
+msgstr ""
+
+#: src/WordPress/Images.php:145
+msgid "Bild für die Veranstaltungen dieses Zentrums. Der Dateiname entspricht dem Titel, z. B. Offener_Deutschtreff.jpg."
+msgstr ""
+
+#: src/WordPress/Images.php:148
+msgid "Nur Administratorinnen und Administratoren können das Zentrum eines Bildes ändern."
+msgstr ""
+
+#: src/WordPress/Images.php:151
+msgid "Zentrum (Enter Once)"
+msgstr ""
+
+#: src/WordPress/Notifier.php:60
+#, php-format
+msgid "Enter Once: Zusammenfassung für %s"
+msgstr ""
+
+#: src/WordPress/Notifier.php:82
+#, php-format
+msgid ""
+"Der Abgleich für %s ist fehlgeschlagen. Auf der Website wurde nichts verändert.\n"
+"\n"
+"Grund: %s\n"
+"\n"
+"Status: %s\n"
+""
+msgstr ""
+
+#: src/WordPress/Notifier.php:84
+#, php-format
+msgid "Enter Once: Fehler beim Abgleich (%s)"
+msgstr ""
+
+#: src/WordPress/Notifier.php:99
+#, php-format
+msgid ""
+"Der Abgleich für %1$s würde %2$d Einträge auf einmal entfernen. Das ist mehr als die Obergrenze; deshalb wurde keiner entfernt.\n"
+"\n"
+"%3$s\n"
+"\n"
+"Prüfen Sie den Kalender. Wenn alles stimmt, klicken Sie auf der Statusseite auf «Trotzdem anwenden»:\n"
+"%4$s\n"
+""
+msgstr ""
+
+#: src/WordPress/Notifier.php:106
+#, php-format
+msgid "Enter Once: Abgleich angehalten (%s)"
+msgstr ""
+
+#: src/WordPress/Notifier.php:162
+#, php-format
+msgid ""
+"Enter Once – Zusammenfassung für %s\n"
+"\n"
+""
+msgstr ""
+
+#: src/WordPress/Notifier.php:163
+msgid "Neu auf der Website"
+msgstr ""
+
+#: src/WordPress/Notifier.php:164
+msgid "Geändert"
+msgstr ""
+
+#: src/WordPress/Notifier.php:165
+msgid "Auf Entwurf gesetzt"
+msgstr ""
+
+#: src/WordPress/Notifier.php:166
+msgid "Verschobene Termine"
+msgstr ""
+
+#: src/WordPress/Notifier.php:167
+msgid "Warnungen"
+msgstr ""
+
+#: src/WordPress/Notifier.php:168
+msgid "Hinweise"
+msgstr ""
+
+#: src/WordPress/Notifier.php:169
+#, php-format
+msgid ""
+"Status: %s\n"
+""
+msgstr ""
+
+#: src/WordPress/Runner.php:70
+msgid "Ein anderer Abgleich läuft gerade."
+msgstr ""
+
+#: src/WordPress/Runner.php:79
+msgid "Interner Fehler beim Abgleich."
+msgstr ""
+
+#: src/WordPress/Runner.php:129
+msgid "Die Liste der angehaltenen Einträge hat sich seit der Anzeige geändert. Es wurde nichts entfernt. Bitte prüfen Sie die neue Liste und klicken Sie erneut auf «Trotzdem anwenden»."
+msgstr ""
+
+#: src/WordPress/Runner.php:333
+#, php-format
+msgid "«%s»: Der Text auf der Website weicht vom Kalender ab (Text der Website wird behalten)."
+msgstr ""
+
+#: src/WordPress/Runner.php:334
+#, php-format
+msgid "«%1$s»: Titel im Kalender lautet «%2$s» (Titel und Text der Website werden behalten)."
+msgstr ""
+
+#: src/WordPress/Runner.php:374
+#, php-format
+msgid "Jeden %s"
+msgstr ""
+
+#: src/WordPress/Scheduler.php:26
+#, php-format
+msgid "Enter Once: alle %d Minuten"
+msgstr ""
+
+#: src/WordPress/TermResolver.php:46
+msgid "Thema"
+msgstr ""
+
+#: src/WordPress/TermResolver.php:46
+msgid "Zielgruppe"
+msgstr ""

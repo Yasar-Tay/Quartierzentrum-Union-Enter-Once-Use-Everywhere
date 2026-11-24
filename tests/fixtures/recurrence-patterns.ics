@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:-//Enter Once//Handmade test fixture//DE
+VERSION:2.0
+X-WR-CALNAME:Fixture recurrence patterns (invented data)
+BEGIN:VEVENT
+UID:fixture-first-saturday@example.org
+SUMMARY:Repair-Treff
+DTSTART;TZID=Europe/Zurich:20270102T100000
+DTEND;TZID=Europe/Zurich:20270102T130000
+RRULE:FREQ=MONTHLY;BYDAY=1SA;UNTIL=20271231T230000Z
+LOCATION:Bühnensaal
+DESCRIPTION:Jeden ersten Samstag im Monat.\n\n[event-type]\nname=Kreativität\n[/event-type]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-biweekly@example.org
+SUMMARY:Velowerkstatt
+DTSTART;TZID=Europe/Zurich:20270106T170000
+DTEND;TZID=Europe/Zurich:20270106T190000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=WE;UNTIL=20270630T220000Z
+LOCATION:Innenhof
+DESCRIPTION:Alle zwei Wochen.\n\n[event-type]\nname=Kreativität\n[/event-type]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-open-ended@example.org
+SUMMARY:Morgenkaffee
+DTSTART;TZID=Europe/Zurich:20270108T090000
+DTEND;TZID=Europe/Zurich:20270108T103000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+LOCATION:Bistro Union
+DESCRIPTION:Jeden Freitag\, ohne Enddatum.\n\n[event-type]\nname=Offener Treffpunkt\n[/event-type]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-two-weekdays@example.org
+SUMMARY:Hausaufgabenhilfe
+DTSTART;TZID=Europe/Zurich:20270105T160000
+DTEND;TZID=Europe/Zurich:20270105T173000
+RRULE:FREQ=WEEKLY;BYDAY=TU,TH;UNTIL=20270325T230000Z
+LOCATION:Projektraum
+DESCRIPTION:Dienstag und Donnerstag.\n\n[event-type]\nname=Bildung\n[/event-type]\n[tag]\nname=Kinder\n[/tag]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-three-dates@example.org
+SUMMARY:Kurzkurs Handy
+DTSTART;TZID=Europe/Zurich:20270111T100000
+DTEND;TZID=Europe/Zurich:20270111T113000
+RRULE:FREQ=WEEKLY;COUNT=3;BYDAY=MO
+LOCATION:Projektraum
+DESCRIPTION:Drei Termine.\n\n[event-type]\nname=Bildung\n[/event-type]\n[tag]\nname=Senior:innen\n[/tag]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-two-per-day@example.org
+SUMMARY:Sprechstunde
+DTSTART;TZID=Europe/Zurich:20270111T090000
+DTEND;TZID=Europe/Zurich:20270111T100000
+RRULE:FREQ=WEEKLY;BYDAY=MO;BYHOUR=9,14;COUNT=8
+LOCATION:Projektraum
+DESCRIPTION:Zweimal pro Montag.\n\n[event-type]\nname=Beratung\n[/event-type]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,65 @@
+# Local test site for Enter Once Sync (development only; credentials are throw-away test values).
+# Start:  dev/wordpress/start      Site:  http://localhost:18471  (admin / enteronce-dev)
+# Tests:  dev/wordpress/test       Stop:  dev/wordpress/stop      Reset: dev/wordpress/reset
+name: enteronce-dev
+
+x-db-env: &db-env
+  WORDPRESS_DB_HOST: db
+  WORDPRESS_DB_USER: wordpress
+  WORDPRESS_DB_PASSWORD: wordpress-dev
+  WORDPRESS_DB_NAME: wordpress
+  WORDPRESS_DEBUG: "1"
+  WORDPRESS_CONFIG_EXTRA: |
+    define('WP_ENVIRONMENT_TYPE', 'local');
+    define('WP_DEBUG_LOG', true);
+    define('WP_DEBUG_DISPLAY', false);
+    define('ENTERONCE_DEV', true);
+
+x-wp-volumes: &wp-volumes
+  - wp_core:/var/www/html
+  - ./:/var/www/html/wp-content/plugins/enter-once-sync
+  - ./dev/wordpress/qtp-standin:/var/www/html/wp-content/themes/qtp-standin
+  - ./dev/wordpress/mu-plugins:/var/www/html/wp-content/mu-plugins
+
+services:
+  db:
+    image: mariadb:10.11
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: wordpress-dev
+      MARIADB_ROOT_PASSWORD: root-dev
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 3s
+      timeout: 5s
+      retries: 40
+
+  wordpress:
+    image: wordpress:php8.1-apache
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "18471:80"
+    environment:
+      <<: *db-env
+    volumes: *wp-volumes
+
+  wpcli:
+    image: wordpress:cli-php8.1
+    profiles: ["cli"]
+    user: "33:33"
+    depends_on:
+      - wordpress
+    environment:
+      <<: *db-env
+      HOME: /tmp
+    working_dir: /var/www/html
+    volumes: *wp-volumes
+
+volumes:
+  db_data:
+  wp_core:

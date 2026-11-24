@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# PHP 8.1 CLI in Docker (the host has no PHP). Usage: bin/php script.php
+exec "$(dirname "$0")/dk" php "$@"

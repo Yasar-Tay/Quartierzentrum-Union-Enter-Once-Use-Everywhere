@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Renders the German guides (docs/de/*.md) to dist/pdf/*.pdf for the handover package.
+# Runs on the host, not in Docker: needs Node 20 or newer and a Chromium browser (Edge, Chrome or
+# Chromium; set EO_BROWSER to the executable if it is not found). See dev/pdf/build-pdf.mjs.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && (pwd -W 2>/dev/null || pwd))"
+cd "$ROOT/dev/pdf"
+[ -d node_modules/marked ] || npm ci --no-audit --no-fund
+node build-pdf.mjs

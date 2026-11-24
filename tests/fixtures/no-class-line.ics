@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:-//Enter Once//Handmade test fixture//DE
+VERSION:2.0
+X-WR-CALNAME:Fixture CLASS handling (invented data)
+BEGIN:VEVENT
+UID:fixture-noclass-1@example.org
+SUMMARY:Spielabend ohne CLASS-Zeile
+DTSTART;TZID=Europe/Zurich:20270115T190000
+DTEND;TZID=Europe/Zurich:20270115T220000
+LOCATION:Quartierraum
+DESCRIPTION:Brettspiele für alle.\n\n[event-type]\nname=Kreativität\n[/event-type]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-confidential-1@example.org
+SUMMARY:Vorstandssitzung
+DTSTART;TZID=Europe/Zurich:20270116T100000
+DTEND;TZID=Europe/Zurich:20270116T120000
+CLASS:CONFIDENTIAL
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-intern-cat-1@example.org
+SUMMARY:Raumreinigung
+DTSTART;TZID=Europe/Zurich:20270117T080000
+DTEND;TZID=Europe/Zurich:20270117T090000
+CLASS:PUBLIC
+CATEGORIES:Öffentlich,intern
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-public-lower-1@example.org
+SUMMARY:Flohmarkt
+DTSTART;TZID=Europe/Zurich:20270118T100000
+DTEND;TZID=Europe/Zurich:20270118T150000
+CLASS:public
+LOCATION:Innenhof
+DTSTAMP:20261201T100000Z
+END:VEVENT
+END:VCALENDAR

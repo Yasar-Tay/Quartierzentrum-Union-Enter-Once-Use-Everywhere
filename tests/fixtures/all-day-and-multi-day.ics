@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:-//Enter Once//Handmade test fixture//DE
+VERSION:2.0
+X-WR-CALNAME:Fixture all-day and multi-day (invented data)
+BEGIN:VEVENT
+UID:fixture-allday-1@example.org
+SUMMARY:Quartierfest
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+LOCATION:Innenhof
+DESCRIPTION:Fest für alle.\n\n[event-type]\nname=Party\n[/event-type]\n[tag]\nname=Familien\n[/tag]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-multiday-allday@example.org
+SUMMARY:Kunstausstellung
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270222
+LOCATION:Foyer
+DESCRIPTION:Bilder aus dem Quartier.\n\n[event-type]\nname=Kultur\n[/event-type]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-multiday-timed@example.org
+SUMMARY:Theaterwochenende
+DTSTART;TZID=Europe/Zurich:20270305T180000
+DTEND;TZID=Europe/Zurich:20270307T160000
+LOCATION:Grosser Saal
+DESCRIPTION:Zwei Tage Theater-Workshop.\n\n[event-type]\nname=Kultur\n[/event-type]
+DTSTAMP:20261201T100000Z
+END:VEVENT
+END:VCALENDAR

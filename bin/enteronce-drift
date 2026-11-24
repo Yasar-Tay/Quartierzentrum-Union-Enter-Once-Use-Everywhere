@@ -1,0 +1,162 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Drift report: compares Union's calendar with the association's public programme page and
+ * writes one HTML file. Run through bin/php (the host has no PHP):
+ *
+ *   bin/php bin/enteronce-drift <ics> <location_cat> <output.html> [options]
+ *
+ *   <ics>           file path or https address of the calendar (env:NAME reads the address from
+ *                   the environment variable NAME, so a secret address stays out of the shell history)
+ *   <location_cat>  the centre's term id on the association site, e.g. 52
+ *   <output.html>   where the report goes; the state file «enteronce-drift.state.json» is written next to it
+ *
+ *   --base=URL        base address of the association site (default https://www.qtp-basel.ch)
+ *   --page-file=FILE  read a saved copy of the programme page instead of making a request
+ *   --now=DATETIME    "now" for the calendar, local Europe/Zurich unless it has an offset (default: the clock)
+ *   --centre=NAME     the centre's name as the site writes it in the address (default «Quartierzentrum Union»)
+ *   --settings=FILE   JSON file with core settings (enteronce_settings shape), optional
+ *   --source=ID       source id for the core (default union)
+ *   --contact=TEXT    optional contact (address or URL) appended to the User-Agent of the request
+ *   --help            this text
+ *
+ * Without --page-file the command makes ONE plain request to the programme page (plan R-40): at most one
+ * run per hour, a User-Agent that names the project, and no further run that day after a 403 or 429 answer.
+ * Exit codes: 0 report written, 1 wrong usage, 2 stopped (message says why; nothing was written).
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+declare(strict_types=1);
+
+use EnterOnce\Drift\DriftRunner;
+use EnterOnce\Drift\FilePageFetcher;
+use EnterOnce\Drift\HttpPageFetcher;
+use EnterOnce\Drift\RunOutcome;
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+$usage = <<<'TXT'
+Aufruf: bin/php bin/enteronce-drift <kalender> <location_cat> <ausgabe.html> [optionen]
+
+  <kalender>      Dateipfad oder https-Adresse des Kalenders (env:NAME liest die Adresse aus der Umgebungsvariable NAME)
+  <location_cat>  Nummer des Standorts auf der Website des Verbands, zum Beispiel 52
+  <ausgabe.html>  Datei, in die der Bericht geschrieben wird (daneben entsteht enteronce-drift.state.json)
+
+Optionen:
+  --base=URL        Basisadresse der Website (Standard: https://www.qtp-basel.ch)
+  --page-file=DATEI gespeicherte Kopie der Programmseite lesen, statt sie abzurufen
+  --now=DATUM       «Jetzt» für den Kalender, zum Beispiel 2026-11-23T00:00 (Standard: aktuelle Zeit)
+  --centre=NAME     Name des Standorts in der Adresse (Standard: Quartierzentrum Union)
+  --settings=DATEI  JSON-Datei mit Einstellungen des Kerns (optional)
+  --source=ID       Quellen-Kennung (Standard: union)
+  --contact=TEXT    Kontakt (Adresse oder URL), der dem Abruf als Absender mitgegeben wird (optional)
+  --help            diese Hilfe
+
+Ohne --page-file ruft der Befehl die Programmseite genau einmal ab: höchstens einmal pro Stunde, mit einem
+Absender, der das Projekt nennt, und nach einer Ablehnung (403 oder 429) an diesem Tag nicht mehr.
+Rückgabewerte: 0 Bericht geschrieben, 1 falsche Verwendung, 2 abgebrochen (die Meldung nennt den Grund).
+
+TXT;
+
+$fail = static function (string $message, int $code = 1) use ($usage): never {
+    fwrite(STDERR, $message . "\n");
+    if ($code === 1) {
+        fwrite(STDERR, "\n" . $usage);
+    }
+    exit($code);
+};
+
+$positional = [];
+$opts = [];
+foreach (array_slice($argv, 1) as $arg) {
+    if ($arg === '--help' || $arg === '-h') {
+        fwrite(STDOUT, $usage);
+        exit(0);
+    }
+    if (preg_match('/^--([a-z-]+)=(.*)$/s', $arg, $m) === 1) {
+        $opts[$m[1]] = $m[2];
+    } elseif (str_starts_with($arg, '--')) {
+        $fail("Unbekannte Option: $arg");
+    } else {
+        $positional[] = $arg;
+    }
+}
+foreach (array_keys($opts) as $name) {
+    if (!in_array($name, ['base', 'page-file', 'now', 'centre', 'settings', 'source', 'contact'], true)) {
+        $fail("Unbekannte Option: --$name");
+    }
+}
+if (count($positional) !== 3) {
+    $fail('Es werden genau drei Angaben erwartet: Kalender, location_cat und Ausgabedatei.');
+}
+[$icsArg, $categoryArg, $outputFile] = $positional;
+
+if (str_starts_with($icsArg, 'env:')) {
+    $value = getenv(substr($icsArg, 4));
+    if (!is_string($value) || $value === '') {
+        $fail('Die Umgebungsvariable «' . substr($icsArg, 4) . '» ist nicht gesetzt.');
+    }
+    $icsArg = $value;
+}
+if (preg_match('/^[1-9][0-9]*$/', $categoryArg) !== 1) {
+    $fail('Die location_cat-Nummer muss eine positive ganze Zahl sein, zum Beispiel 52.');
+}
+
+$options = [];
+if (isset($opts['base'])) {
+    $options['base'] = $opts['base'];
+}
+if (isset($opts['centre'])) {
+    $options['centre'] = $opts['centre'];
+}
+if (isset($opts['source']) && $opts['source'] !== '') {
+    $options['source'] = $opts['source'];
+}
+if (isset($opts['now'])) {
+    try {
+        $options['now'] = new DateTimeImmutable($opts['now'], new DateTimeZone('Europe/Zurich'));
+    } catch (Exception) {
+        $fail('Das Datum bei --now ist ungültig. Beispiel: 2026-11-23T00:00');
+    }
+}
+if (isset($opts['settings'])) {
+    $text = is_file($opts['settings']) ? @file_get_contents($opts['settings']) : false;
+    $settings = $text === false ? null : json_decode($text, true);
+    if (!is_array($settings)) {
+        $fail('Die Einstellungsdatei kann nicht gelesen werden oder ist kein JSON-Objekt: ' . $opts['settings']);
+    }
+    $options['settings'] = $settings;
+}
+
+if (isset($opts['page-file'])) {
+    $fetcher = new FilePageFetcher($opts['page-file']);
+    $options['pageLabel'] = 'Datei ' . basename($opts['page-file']);
+} else {
+    $fetcher = new HttpPageFetcher($opts['contact'] ?? '');
+}
+
+$outcome = (new DriftRunner($fetcher))->run($icsArg, (int) $categoryArg, $outputFile, $options);
+
+if ($outcome->status === RunOutcome::USAGE) {
+    $fail($outcome->message);
+}
+if (!$outcome->isOk() || $outcome->result === null) {
+    fwrite(STDERR, $outcome->message . "\n");
+    exit(2);
+}
+
+$c = $outcome->result->counts();
+fwrite(STDOUT, $outcome->message . "\n");
+fwrite(STDOUT, sprintf(
+    "Fehlt auf der Website: %d | Auf der Website anders: %d | Nur auf der Website: %d | Abgesagt, aber online: %d | Nicht eindeutig: %d | Nicht beurteilbar: %d | In Ordnung: %d\n",
+    $c['missing'],
+    $c['different'],
+    $c['only_on_site'],
+    $c['cancelled_online'],
+    $c['ambiguous'],
+    $c['unverifiable'],
+    $c['agreeing'],
+));
+exit(0);

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Composer 2 in Docker. Usage: bin/composer install
+EO_IMAGE="${EO_IMAGE:-composer:2}" exec "$(dirname "$0")/dk" composer "$@"

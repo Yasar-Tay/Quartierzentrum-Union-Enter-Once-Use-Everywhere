@@ -1,0 +1,53 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:-//Enter Once//Handmade test fixture//DE
+VERSION:2.0
+X-WR-CALNAME:Fixture attendee lines (invented data)
+BEGIN:VEVENT
+UID:fixture-attendees-1@example.org
+SUMMARY:Erzählcafé
+DTSTART;TZID=Europe/Zurich:20270112T150000
+DTEND;TZID=Europe/Zurich:20270112T170000
+LOCATION:Bistro Union
+DESCRIPTION:Geschichten aus dem Quartier.\n\n[event-type]\nname=Kultur\n[/event-type]
+ORGANIZER;CN=Erika Muster:mailto:erika.muster@example.org
+ATTENDEE;CN=Max Beispiel;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED:mailto:max.beispiel@example.org
+ATTENDEE;CN="Programm Kalender";CUTYPE=RESOURCE:mailto:programm-kalender@example.org
+CONTACT:Erika Muster\, +41 00 000 00 00
+X-MS-OLK-SENDER;CN=Erika Muster:mailto:erika.muster@example.org
+X-ALT-DESC;FMTTYPE=text/html:<p>Erika Muster lädt ein</p>
+CLASS:PUBLIC
+DTSTAMP:20261201T100000Z
+BEGIN:VALARM
+ACTION:EMAIL
+ATTENDEE:mailto:erika.muster@example.org
+SUMMARY:Erinnerung an Erika Muster
+DESCRIPTION:Erinnerung
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-attendees-series@example.org
+SUMMARY:Nähtreff
+DTSTART;TZID=Europe/Zurich:20270111T180000
+DTEND;TZID=Europe/Zurich:20270111T200000
+RRULE:FREQ=WEEKLY;COUNT=6;BYDAY=MO
+LOCATION:Oberer Saal
+DESCRIPTION:Gemeinsam nähen.\n\n[event-type]\nname=Kreativität\n[/event-type]
+ORGANIZER;CN=Erika Muster:mailto:erika.muster@example.org
+ATTENDEE;CN=Max Beispiel:mailto:max.beispiel@example.org
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-attendees-series@example.org
+RECURRENCE-ID;TZID=Europe/Zurich:20270118T180000
+SUMMARY:Nähtreff
+DTSTART;TZID=Europe/Zurich:20270118T190000
+DTEND;TZID=Europe/Zurich:20270118T210000
+LOCATION:Oberer Saal
+DESCRIPTION:Gemeinsam nähen.\n\n[event-type]\nname=Kreativität\n[/event-type]
+ORGANIZER;CN=Erika Muster:mailto:erika.muster@example.org
+ATTENDEE;CN=Max Beispiel:mailto:max.beispiel@example.org
+DTSTAMP:20261201T100000Z
+END:VEVENT
+END:VCALENDAR

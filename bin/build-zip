@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Builds dist/enter-once-sync.zip: installable through «Plugins → Installieren → Plugin hochladen».
+# Contains the plugin, sabre/vobject with a prefixed namespace (A-13) and the widget files.
+# Runs in Docker (composer:2 image, which has PHP with the zip extension). Needs bin/composer install first.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && (pwd -W 2>/dev/null || pwd))"
+cd "$ROOT"
+[ -d vendor/sabre/vobject ] || bin/composer install --no-interaction
+EO_IMAGE=composer:2 bin/dk php dev/wordpress/build-zip.php

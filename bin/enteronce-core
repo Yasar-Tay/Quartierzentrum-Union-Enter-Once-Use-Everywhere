@@ -1,0 +1,133 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Developer command for the WordPress-free core. Run through bin/php:
+ *
+ *   bin/php bin/enteronce-core <mode> --ics=FILE --now=DATETIME --from=YYYY-MM-DD --to=YYYY-MM-DD
+ *                              [--source=union] [--settings=FILE.json] [--site=FILE.json] [--release-held]
+ *
+ * Modes:
+ *   occurrences  summary, notices and all occurrences in the window (cancelled ones flagged)
+ *   series       summary, notices and every series definition
+ *   targets      summary and the site-side target records (weekly offers, dated events, pending)
+ *   feed         the public feed as a JSON array (AGENTS.md format, image null), from..to
+ *   plan         the diff against the site records in --site (a JSON list of SiteRecord arrays;
+ *                default: no site records, i.e. a first run)
+ *
+ * --now is local Europe/Zurich time unless it carries an offset, e.g. 2026-11-19T00:00.
+ * The window is --from 00:00 to the end of --to (local). Exit code 2 on an integrity error.
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+declare(strict_types=1);
+
+use EnterOnce\Core\Core;
+use EnterOnce\Core\IntegrityError;
+use EnterOnce\Core\Notice;
+use EnterOnce\Core\Occurrence;
+use EnterOnce\Core\SeriesDefinition;
+use EnterOnce\Core\Settings;
+use EnterOnce\Core\SiteRecord;
+use EnterOnce\Core\TargetRecord;
+use EnterOnce\Core\Window;
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+$usage = "Usage: bin/php bin/enteronce-core occurrences|series|targets|feed|plan --ics=FILE --now=DATETIME --from=YYYY-MM-DD --to=YYYY-MM-DD [--source=union] [--settings=FILE] [--site=FILE] [--release-held]\n";
+
+$mode = $argv[1] ?? '';
+$opts = [];
+foreach (array_slice($argv, 2) as $arg) {
+    if (preg_match('/^--([a-z-]+)(?:=(.*))?$/', $arg, $m)) {
+        $opts[$m[1]] = $m[2] ?? true;
+    } else {
+        fwrite(STDERR, "Unknown argument: $arg\n$usage");
+        exit(1);
+    }
+}
+if (!in_array($mode, ['occurrences', 'series', 'targets', 'feed', 'plan'], true)) {
+    fwrite(STDERR, $usage);
+    exit(1);
+}
+foreach (['ics', 'now', 'from', 'to'] as $required) {
+    if (!isset($opts[$required]) || !is_string($opts[$required])) {
+        fwrite(STDERR, "Missing --$required\n$usage");
+        exit(1);
+    }
+}
+
+$readJson = static function (string $path): array {
+    $text = @file_get_contents($path);
+    if ($text === false) {
+        fwrite(STDERR, "Cannot read $path\n");
+        exit(1);
+    }
+    $data = json_decode($text, true);
+    if (!is_array($data)) {
+        fwrite(STDERR, "$path is not a JSON object or list\n");
+        exit(1);
+    }
+
+    return $data;
+};
+
+$ics = @file_get_contents($opts['ics']);
+if ($ics === false) {
+    fwrite(STDERR, "Cannot read {$opts['ics']}\n");
+    exit(1);
+}
+$source = is_string($opts['source'] ?? null) ? $opts['source'] : 'union';
+$settings = isset($opts['settings']) && is_string($opts['settings']) ? $readJson($opts['settings']) : [];
+$now = new DateTimeImmutable($opts['now'], Settings::timezone());
+$window = Window::fromDates($opts['from'], $opts['to']);
+
+$core = new Core($settings, $source);
+try {
+    $result = $core->read($ics, $now, $window);
+} catch (IntegrityError $e) {
+    echo json_encode(['error' => $e->reason, 'message' => $e->getMessage(), 'message_de' => $e->germanMessage()], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), "\n";
+    exit(2);
+}
+
+$notices = array_map(static fn (Notice $n) => $n->toArray(), $result->notices);
+$head = [
+    'source_id' => $source,
+    'now' => $result->now->format(DATE_ATOM),
+    'window' => $window->toArray(),
+    'summary' => $result->summary(),
+    'notices' => $notices,
+];
+
+switch ($mode) {
+    case 'occurrences':
+        $out = $head + ['occurrences' => array_map(static fn (Occurrence $o) => $o->toArray(), $result->occurrences)];
+        break;
+    case 'series':
+        $out = $head + ['series' => array_map(static fn (SeriesDefinition $s) => $s->toArray(), $result->series)];
+        break;
+    case 'targets':
+        $targets = $core->targets($result);
+        $out = $head + [
+            'targets_summary' => $targets->summary(),
+            'weekly_offers' => array_map(static fn (TargetRecord $t) => $t->toArray(), $targets->ofKind(TargetRecord::WEEKLY_OFFER)),
+            'dated_events' => array_map(static fn (TargetRecord $t) => $t->toArray(), $targets->ofKind(TargetRecord::DATED_EVENT)),
+            'pending_weekly_offers' => array_map(static fn (TargetRecord $t) => $t->toArray(), $targets->pending),
+        ];
+        break;
+    case 'feed':
+        $out = $core->feed($result->occurrences, $window);
+        break;
+    case 'plan':
+        $site = isset($opts['site']) && is_string($opts['site'])
+            ? array_map(static fn (array $a) => SiteRecord::fromArray($a), $readJson($opts['site']))
+            : [];
+        $plan = $core->diff($core->targets($result), $site, isset($opts['release-held']));
+        $out = $head + ['plan' => $plan->toArray()];
+        break;
+    default:
+        exit(1);
+}
+
+echo json_encode($out, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR), "\n";

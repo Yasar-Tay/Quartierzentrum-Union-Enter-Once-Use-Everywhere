@@ -1,0 +1,17 @@
+# Text files are stored and checked out with LF line endings on every system. The scripts in bin/
+# and dev/wordpress/ run inside Linux containers and break with CRLF.
+* text=auto eol=lf
+
+# Calendar fixtures are compared byte for byte (the iCalendar format itself uses CRLF).
+*.ics -text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.zip binary
+*.pdf binary
+*.mo binary

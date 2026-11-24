@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Runs ALL tests: the core and drift unit tests (bin/phpunit) and the WordPress integration tests
+# against the local site. Starts the site if needed. The integration tests reset the stand-in's
+# events and the plugin's options; run dev/wordpress/seed afterwards for a clean demo state.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/../.." && (pwd -W 2>/dev/null || pwd))"
+cd "$ROOT"
+export MSYS_NO_PATHCONV=1
+dc() { docker compose -f "$ROOT/docker-compose.yml" "$@"; }
+
+echo "== Unit tests (core, drift)"
+bin/phpunit
+
+if ! dc ps --status running --services 2>/dev/null | grep -q '^wordpress$'; then
+  "$ROOT/dev/wordpress/start"
+fi
+
+echo "== WordPress integration tests"
+dc exec -T -w /var/www/html/wp-content/plugins/enter-once-sync wordpress \
+  php vendor/bin/phpunit -c tests/WordPress/phpunit.xml "$@"
+
+echo "== Build (plugin zip and handover package) and clean install of the zip"
+bin/build-package
+"$ROOT/dev/wordpress/test-zip-install"
+
+echo "== Handover package"
+"$ROOT/dev/wordpress/test-package"
+
+echo "== Restoring the demo state of the local site"
+dc run --rm -T wpcli wp eval 'global $wpdb; $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '"'"'enteronce\\_%'"'"'"); EnterOnce\WordPress\Plugin::activate(); echo "plugin options reset\n";' 2>/dev/null
+"$ROOT/dev/wordpress/seed" 2>/dev/null
+echo "All tests passed."

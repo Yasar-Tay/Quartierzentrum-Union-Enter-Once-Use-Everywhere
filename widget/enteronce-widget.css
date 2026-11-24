@@ -1,0 +1,473 @@
+/*
+ * Enter once, show everywhere: styles for the event widget.
+ * Licence: GPL-2.0-or-later.
+ *
+ * Every colour, font and size is a custom property. The defaults are taken
+ * from Union's stylesheet (webflow-static, union-8d3333.webflow.shared.*.css).
+ * To change the look, override the variables, for example in Webflow's
+ * custom code:  .eo-widget { --eo-text: #000; }
+ * No font is loaded here: the names below are fonts that union-basel.ch
+ * already loads itself. On another site the stack falls back to Arial.
+ */
+
+.eo-widget {
+  /* Union's palette: midnight-blue, molten-orange, pacific-blue, tea-green,
+     frozen-water, almond-silk. */
+  --eo-text: #312a6f;            /* midnight-blue: all text */
+  --eo-bg: #ffffff;
+  --eo-link: #b53700;            /* darkened molten-orange (#e94e0e itself is only 3.8:1 on white) */
+  --eo-accent: #e94e0e;          /* molten-orange: decoration only, never text */
+  --eo-border: #01b3c4;          /* pacific-blue: card and button borders */
+  --eo-control-border: #312a6f;  /* form controls need 3:1 against the page */
+  --eo-focus: #312a6f;
+  --eo-badge-bg: #312a6f;
+  --eo-badge-text: #ffffff;
+  --eo-category-bg: #d6fcd5;     /* tea-green */
+  --eo-tag-bg: #c9f8fb;          /* frozen-water */
+  --eo-cancel-bg: #ffd0c6;       /* almond-silk */
+  --eo-placeholder-bg: #eceaf6;
+  --eo-font-body: "Rethink Sans", Arial, sans-serif;
+  --eo-font-heading: "Haffer XH", "Rethink Sans", Arial, sans-serif;
+  --eo-radius: 20px;
+  --eo-gap: 1rem;
+  --eo-max-width: 1100px;
+  --eo-image-width: 240px;       /* list view */
+  --eo-grid-min: 260px;          /* grid view: minimum card width */
+
+  box-sizing: border-box;
+  max-width: var(--eo-max-width);
+  margin: 0 auto;
+  color: var(--eo-text);
+  font-family: var(--eo-font-body);
+  font-size: 1rem;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.eo-widget *,
+.eo-widget *::before,
+.eo-widget *::after {
+  box-sizing: border-box;
+}
+
+/* Page styles for bare elements (Webflow sets width, margins, colours on p, h*, a) are reset here. */
+.eo-widget p,
+.eo-widget ul,
+.eo-widget ol,
+.eo-widget li,
+.eo-widget h1,
+.eo-widget h2,
+.eo-widget h3,
+.eo-widget h4,
+.eo-widget h5 {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  color: var(--eo-text);
+  font-family: var(--eo-font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.eo-widget ul {
+  list-style: none;
+}
+
+/* Webflow gives every img margin-top: 20px and max-width: none. */
+.eo-widget img {
+  max-width: 100%;
+  margin: 0;
+  border: 0;
+  vertical-align: middle;
+}
+
+.eo-widget a {
+  color: var(--eo-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Visible focus, one style for everything that can take focus. */
+.eo-widget a:focus-visible,
+.eo-widget button:focus-visible,
+.eo-widget input:focus-visible,
+.eo-widget select:focus-visible,
+.eo-widget summary:focus-visible {
+  outline: 3px solid var(--eo-focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--eo-bg);
+}
+
+.eo-vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------------------------------------------------------------- messages */
+
+.eo-widget .eo-message {
+  padding: 1.25rem;
+  border: 3px solid var(--eo-border);
+  border-radius: var(--eo-radius);
+}
+
+.eo-widget .eo-message p + p {
+  margin-top: 0.5rem;
+}
+
+/* ----------------------------------------------------------------- filters */
+
+.eo-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--eo-gap);
+  margin: 0 0 0.5rem;
+}
+
+.eo-filters .eo-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 11rem;
+}
+
+.eo-filters .eo-field:first-child {
+  flex: 1 1 14rem;
+}
+
+.eo-widget .eo-period {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--eo-gap);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.eo-widget .eo-period legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.eo-widget label {
+  color: var(--eo-text);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.eo-widget .eo-control {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  color: var(--eo-text);
+  background-color: var(--eo-bg);
+  border: 2px solid var(--eo-control-border);
+  border-radius: 12px;
+  font-family: var(--eo-font-body);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.eo-widget .eo-control[aria-invalid="true"] {
+  border-width: 3px;
+  border-style: dashed;
+}
+
+.eo-widget .eo-button {
+  min-height: 2.75rem;
+  padding: 0.5rem 1.25rem;
+  color: var(--eo-text);
+  background: var(--eo-bg);
+  border: 3px solid var(--eo-border);
+  border-radius: 25px;
+  font-family: var(--eo-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.eo-widget .eo-button:hover {
+  background: var(--eo-category-bg);
+}
+
+.eo-widget .eo-status {
+  margin: 0.5rem 0 0;
+  font-weight: 700;
+}
+
+/* ----------------------------------------------------------------- results */
+
+.eo-widget .eo-month {
+  margin-top: 2rem;
+}
+
+.eo-widget .eo-month-title {
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 3px solid var(--eo-accent);
+  font-family: var(--eo-font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+.eo-widget .eo-list {
+  display: grid;
+  gap: var(--eo-gap);
+}
+
+.eo-widget.eo-view-grid .eo-list {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--eo-grid-min)), 1fr));
+}
+
+.eo-widget .eo-item {
+  display: flex;
+}
+
+/* ------------------------------------------------------------------- cards */
+
+.eo-widget .eo-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--eo-image-width) minmax(0, 1fr);
+  width: 100%;
+  overflow: hidden;
+  background: var(--eo-bg);
+  border: 3px solid var(--eo-border);
+  border-radius: var(--eo-radius);
+}
+
+.eo-widget.eo-view-grid .eo-card {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+.eo-widget .eo-media {
+  position: relative;
+  min-height: 10rem;
+  background: var(--eo-placeholder-bg);
+}
+
+.eo-widget.eo-view-grid .eo-media {
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+}
+
+.eo-widget .eo-media img,
+.eo-widget .eo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.eo-widget .eo-media img {
+  object-fit: cover;
+}
+
+.eo-widget .eo-placeholder {
+  background: var(--eo-placeholder-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23312a6f' stroke-opacity='.45' stroke-width='1.2'%3E%3Crect x='3' y='5' width='18' height='16' rx='2'/%3E%3Cpath d='M3 10h18M8 3v4M16 3v4'/%3E%3C/svg%3E") center / 3.5rem no-repeat;
+}
+
+.eo-widget .eo-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 3.5rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--eo-badge-text);
+  background: var(--eo-badge-bg);
+  border-radius: 12px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.eo-widget .eo-badge span {
+  color: var(--eo-badge-text);
+}
+
+.eo-widget .eo-badge-weekday,
+.eo-widget .eo-badge-month {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.eo-widget .eo-badge-day {
+  font-family: var(--eo-font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.eo-widget .eo-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+  padding: 1rem 1.25rem;
+}
+
+/* The DOM reads title, date, place, labels; visually the categories come first. */
+.eo-widget .eo-cats {
+  order: -1;
+}
+
+.eo-widget .eo-title {
+  font-family: var(--eo-font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  overflow-wrap: anywhere;
+}
+
+.eo-widget .eo-when {
+  font-weight: 700;
+}
+
+.eo-widget .eo-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.eo-widget .eo-labels li {
+  padding: 0.125rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3rem;
+  border: 1px solid var(--eo-control-border);
+  border-radius: 999px;
+}
+
+.eo-widget .eo-cats li {
+  background: var(--eo-category-bg);
+}
+
+.eo-widget .eo-tags li {
+  background: var(--eo-tag-bg);
+}
+
+/* Cancelled: struck through AND the word «abgesagt»; colour is never the only signal. */
+.eo-widget .eo-cancelled {
+  border-style: dashed;
+}
+
+.eo-widget .eo-cancelled .eo-media img {
+  filter: grayscale(1);
+}
+
+.eo-widget .eo-cancel-label {
+  display: inline-block;
+  padding: 0 0.5rem;
+  background: var(--eo-cancel-bg);
+  border: 2px solid var(--eo-control-border);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.eo-widget .eo-cancelled s {
+  text-decoration-thickness: 2px;
+}
+
+/* ----------------------------------------------------------------- details */
+
+.eo-widget .eo-more {
+  margin-top: 0.25rem;
+}
+
+.eo-widget .eo-more summary {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding: 0.5rem 0;
+  color: var(--eo-link);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  cursor: pointer;
+}
+
+.eo-widget .eo-desc {
+  padding-top: 0.25rem;
+  overflow-wrap: anywhere;
+}
+
+.eo-widget .eo-desc p,
+.eo-widget .eo-desc ul,
+.eo-widget .eo-desc ol,
+.eo-widget .eo-desc blockquote {
+  margin: 0 0 0.5rem;
+}
+
+.eo-widget .eo-desc ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.eo-widget .eo-desc ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+}
+
+.eo-widget .eo-desc li {
+  display: list-item;
+}
+
+.eo-widget .eo-desc blockquote {
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--eo-border);
+}
+
+/* ------------------------------------------------------------ small screens */
+
+@media (max-width: 40rem) {
+  .eo-widget .eo-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .eo-widget .eo-media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .eo-filters .eo-field,
+  .eo-widget .eo-period {
+    flex: 1 1 100%;
+  }
+
+  .eo-widget .eo-period .eo-field {
+    flex: 1 1 8rem;
+    min-width: 8rem;
+  }
+}
+
+/* Windows high-contrast mode: keep the borders that carry the structure. */
+@media (forced-colors: active) {
+  .eo-widget .eo-card,
+  .eo-widget .eo-labels li,
+  .eo-widget .eo-badge {
+    border: 2px solid CanvasText;
+  }
+}

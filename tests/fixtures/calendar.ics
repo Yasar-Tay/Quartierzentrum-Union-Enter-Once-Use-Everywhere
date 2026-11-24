@@ -1,0 +1,319 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+X-WR-CALNAME:Hackathon_Testkalender
+BEGIN:VTIMEZONE
+TZID:W. Europe Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DESCRIPTION:Übe dein Deutsch kostenlos!\n\nMöchtest du besser Deutsch ver
+ stehen\, Deutsch sprechen\, Deutsch schreiben und Deutsch lesen? Dein Deut
+ sch üben und dabei neue Leute kennenlernen? Dann bist du bei uns herzlich
+  willkommen! Das Gratisdeutschangebot «Deutsch im Alltag» richtet sich a
+ n Niveau A1 – A2\n\nInfo/Kontakt: kontakt@union-basel.ch<mailto:kontakt@
+ union-basel.ch> oder unter +41 78 719 58 15\n\nKosten: Kostenlos\, Anmeldu
+ ng notwendig.\n\n\n[event-type]\n\nname= Bildung\n\n[/event-type]\n\n\n\n[
+ tag]\nname=Deutschlernende\n[/tag]\n\n\n\n[tag]\nname=Erwachsene\n[/tag]\n
+ \n\n\n
+RRULE:FREQ=WEEKLY;UNTIL=20270621T070000Z;INTERVAL=1;BYDAY=MO;WKST=MO
+UID:040000008200E00074C5B7101A82E0080000000050756CA84277DD01000000000000000
+ 01000000088CC4D047EC66C4CA4C9D244DCA87503
+SUMMARY:Test: Deutsch im Alltag
+DTSTART;TZID=W. Europe Standard Time:20270104T090000
+DTEND;TZID=W. Europe Standard Time:20270104T110000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20261123T145911Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:1
+LOCATION:Projektraum Rehovot
+X-MICROSOFT-CDO-APPT-SEQUENCE:1
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:1
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Indoor-Spielplatz für Kinder bis 5 Jahre mit Begleitpersonen I
+ m gemütlichen Bistro\, im Quartierraum und im Grossen Saal gibt’s jewei
+ ls am Montagnachmittag von 14:00 bis 17:00 Uhr viele Spielsachen\, Bewegun
+ g- und Kreativangebote und kleine Spielanimationen für Kleinkinder bis f
+ ünf Jahre. Dazu gibt’s feine Snacks und eine Auswahl an Kaffee & Tee.\n
+ \nWann: Jeden Montag\, 14:00 - 17:00 Uhr\nInfo/Kontakt: kontakt@union-base
+ l.ch<mailto:kontakt@union-basel.ch> oder unter +41 78 719 58 15\nKosten: K
+ ostenlos\, ohne Anmeldung\n
+UID:040000008200E00074C5B7101A82E00800000000403D3A344F68DD01000000000000000
+ 01000000053A896B9C7DBAA47B27A75FB873F2AFC
+SUMMARY:Test: Kinderpiazza
+DTSTART;TZID=W. Europe Standard Time:20270104T140000
+DTEND;TZID=W. Europe Standard Time:20270104T170000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20261123T145911Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:2
+LOCATION:Projektraum Rehovot
+X-MICROSOFT-CDO-APPT-SEQUENCE:2
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Rythmik-Kurse und Kaffeeplausch\n\nFit für den Alltag: Die bel
+ iebten Rhythmik-Kurse nach Jaques-Dalcroze geben ihnen die Möglichkeit\, 
+ sich regelmässig mit anderen zu bewegen. Das verbessert die Gangsicherhei
+ t\, vermindert das Sturzrisiko und macht Freude. Der anschliessende Kaffee
+ plausch lädt zum gemütlichen Beisammensein ein.\n\nWährend den Schulfer
+ ien findet der Treffpunkt nicht statt.\n\nKeine Vorkenntnisse nötig\; gra
+ tis testen und sich selbst überzeugen\n\n\n\nInformation/Kontakt: Gesundh
+ eitsdepartement Basel-Stadt\, Abteilung Prävention\, 061 267 45 20\, md@b
+ s.ch<https://www.qtp-basel.ch/events/cafe-balance-3/md@bs.ch> / kontakt@un
+ ion-basel.ch<mailto:kontakt@union-basel.ch>\n\nVeranstalter:in: Gesundheit
+ sdepartement Basel-Stadt und Quartierzentrum Union\n\nKosten: Die Teilnahm
+ e kostet CHF 50.- für 10 Lektionen. Einmal Schnuppern ist gratis.\n\n[eve
+ nt-type]\n\nname=Bewegung\n\nname=Austausch\n\n[/event-type]\n\n\n\n[tag]\
+ n\nname=Senior:innen\n\n\n
+RRULE:FREQ=WEEKLY;UNTIL=20270621T120000Z;INTERVAL=1;BYDAY=MO;WKST=MO
+UID:040000008200E00074C5B7101A82E00800000000307ABB1F4277DD01000000000000000
+ 01000000082602CBDCA02984299C1D21B484391DE
+SUMMARY:Test: Café Balance
+DTSTART;TZID=W. Europe Standard Time:20270104T140000
+DTEND;TZID=W. Europe Standard Time:20270104T150000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20261123T145911Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION:Innenhof
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:1
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Indoor-Spielplatz für Kinder bis 5 Jahre mit Begleitpersonen I
+ m gemütlichen Bistro\, im Quartierraum und im Grossen Saal gibt’s jewei
+ ls am Montagnachmittag von 14:00 bis 17:00 Uhr viele Spielsachen\, Bewegun
+ g- und Kreativangebote und kleine Spielanimationen für Kleinkinder bis f
+ ünf Jahre. Dazu gibt’s feine Snacks und eine Auswahl an Kaffee & Tee.\n
+ \nWann: Jeden Montag\, 14:00 - 17:00 Uhr\nInfo/Kontakt: kontakt@union-base
+ l.ch<mailto:kontakt@union-basel.ch> oder unter +41 78 719 58 15\nKosten: K
+ ostenlos\, ohne Anmeldung\n
+UID:040000008200E00074C5B7101A82E00800000000C07B41185068DD01000000000000000
+ 01000000008EB6910B7AEB547A2FC907DAD264AE7
+SUMMARY:Test: Deutsch im Alltag
+DTSTART;TZID=W. Europe Standard Time:20270105T091500
+DTEND;TZID=W. Europe Standard Time:20270105T110000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20261123T145911Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:1
+LOCATION:Projektraum Rehovot
+X-MICROSOFT-CDO-APPT-SEQUENCE:1
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:offen für alle\n\nEin Tribut an Johnny Cash. Auf Kollekte.\n\n
+UID:040000008200E00074C5B7101A82E0080000000090D8082F5477DD01000000000000000
+ 010000000976B17FC5F0B6644B7596D3037AB0727
+SUMMARY:Test: Konzert Terrible two
+DTSTART;TZID=W. Europe Standard Time:20270105T190000
+DTEND;TZID=W. Europe Standard Time:20270105T220000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20261123T145911Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION:Bistro Quartierraum
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Übe dein Deutsch kostenlos!\n\nMöchtest du besser Deutsch ver
+ stehen\, Deutsch sprechen\, Deutsch schreiben und Deutsch lesen? Dein Deut
+ sch üben und dabei neue Leute kennenlernen? Dann bist du bei uns herzlich
+  willkommen! Das Gratisdeutschangebot «Deutsch im Alltag» richtet sich a
+ n Niveau A1 – A2\n\nInfo/Kontakt: kontakt@union-basel.ch<mailto:kontakt@
+ union-basel.ch> oder unter +41 78 719 58 15\n\nKosten: Kostenlos\, Anmeldu
+ ng notwendig.\n\n\n[event-type]\n\nname= Bildung\n\n[/event-type]\n\n\n\n[
+ tag]\nname=Deutschlernende\n[/tag]\n\n\n\n[tag]\nname=Erwachsene\n[/tag]\n
+ \n\n\n
+RRULE:FREQ=WEEKLY;UNTIL=20270623T070000Z;INTERVAL=1;BYDAY=WE;WKST=MO
+UID:040000008200E00074C5B7101A82E00800000000E0A7BDD04277DD01000000000000000
+ 010000000C3F81EFFB884C6479AA18FF534C59DB1
+SUMMARY:Test: Deutsch im Alltag
+DTSTART;TZID=W. Europe Standard Time:20270106T090000
+DTEND;TZID=W. Europe Standard Time:20270106T110000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20261123T145911Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION:Projektraum Rehovot
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:1
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Gemeinsames Philosophieren um Fragen des Älterwerdens Café Di
+ alogue richtet sich an alle Seniorinnen und Senioren\, die sich in angeneh
+ mer Atmosphäre zu den wichtigen Fragen des Älterwerdens und weiteren The
+ men austauschen möchten. Die Anlässe werden moderiert von Andreas Brenne
+ r\, Professor für Philosophie. Im Café Dialogue ist kein philosophisches
+  Wissen gefragt\, sondern vielmehr spontanes gemeinsames Nachdenken\, Disk
+ utieren und Philosophieren oder einfach nur Zuhören im Kreise neugieriger
+  Menschen. Eine Übersicht zu allen Daten und Themen finden Sie hier.\nInf
+ ormation/Kontakt: kontakt@union-basel.ch<mailto:kontakt@union-basel.ch>\nV
+ eranstalter:in: Gesundheitsdepartement Basel-Stadt und Quartierzentrum Uni
+ on\nKosten: Kostenlos\, ohne Anmeldung\n
+UID:040000008200E00074C5B7101A82E00800000000C01D0E306568DD01000000000000000
+ 0100000006B736677625C8F43833829EE50D88D61
+SUMMARY:Test: Café Dialogue
+DTSTART;TZID=W. Europe Standard Time:20270106T140000
+DTEND;TZID=W. Europe Standard Time:20270106T153000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20261123T145911Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:2
+LOCATION:Projektraum Rehovot
+X-MICROSOFT-CDO-APPT-SEQUENCE:2
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Möchtest du dein Deutsch verbessern? Im Quartierzentrum Union 
+ findest du ausgewählte digitale und analoge Spiele und andere Lernunterla
+ gen und kannst dich mit anderen Deutschlernenden austauschen. Jeden Donner
+ stag von 15:00 – 17:00 Uhr. Komm einfach vorbei – keine Anmeldung nöt
+ ig! Der Deutschtreff ist offen für alle Niveaus.\n\nWann: Jeden Donnersta
+ g\, 15:00 - 17:00 Uhr\nInfo/Kontakt: kontakt@union-basel.ch<mailto:kontakt
+ @union-basel.ch> oder unter +41 78 719 58 15\nKosten: Kostenlos\, ohne Anm
+ eldung\n
+RRULE:FREQ=WEEKLY;UNTIL=20270325T140000Z;INTERVAL=1;BYDAY=TH;WKST=MO
+UID:040000008200E00074C5B7101A82E00800000000204575056568DD01000000000000000
+ 01000000041DA350A57AE144E9A0F7570EF064911
+SUMMARY:Test: Offener Deutschtreff
+DTSTART;TZID=W. Europe Standard Time:20270107T150000
+DTEND;TZID=W. Europe Standard Time:20270107T170000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20261123T145911Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:3
+LOCATION:Innenhof
+X-MICROSOFT-CDO-APPT-SEQUENCE:3
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:1
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:FALSE
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Theater für alle\nWir steigen aus dem Alltag aus und erzählen
+  Geschichten mit unserer Sprache und unserem Körper. Starke Emotionen und
+  Grenzsituationen werden mit verschiedenen Schauspiel-Techniken geübt. Wi
+ r drücken Intuitionen und Poesie aus und entfalten Persönlichkeiten von 
+ Figuren. Ob du inszenieren\, performen oder auch nur trainieren möchtest\
+ , oder mit Text oder Videos mitwirkst – du bist willkommen.\n\nYou don
+ ’t need stage experience\, we don’t mind your status or profession\, s
+ ans papiers and refugees welcome!\n\n\n[tag]\nname=Erwachsene\n[/tag]\n\n\
+ n\n[event-type]\nname=Kultur\n[/event-type]\n\n\n\n
+RRULE:FREQ=WEEKLY;UNTIL=20270625T160000Z;INTERVAL=1;BYDAY=FR;WKST=MO
+UID:040000008200E00074C5B7101A82E00800000000700143534277DD01000000000000000
+ 01000000003D865E431F7E340AD1EB3D570789105
+SUMMARY:Test: Theater Niemandsland
+DTSTART;TZID=W. Europe Standard Time:20270108T180000
+DTEND;TZID=W. Europe Standard Time:20270108T210000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20261123T145911Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:2
+LOCATION:Foyer
+X-MICROSOFT-CDO-APPT-SEQUENCE:2
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:1
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:FALSE
+END:VEVENT
+END:VCALENDAR

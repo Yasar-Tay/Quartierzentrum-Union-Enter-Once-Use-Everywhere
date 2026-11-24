@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Builds dist/enter-once-uebergabe.zip, the handover package: the plugin zip (built first with
+# bin/build-zip), the German guides as Markdown and PDF, the drift report as a standalone tool, the
+# full source. Runs in Docker (composer:2 image, PHP with the zip extension), except the PDFs, which
+# bin/build-pdf renders on the host (Node and a Chromium browser). Without those:
+# EO_NO_PDF=1 bin/build-package builds the package with the Markdown guides only.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && (pwd -W 2>/dev/null || pwd))"
+cd "$ROOT"
+bin/build-zip
+PDF_ARG=""
+if [ "${EO_NO_PDF:-}" = "1" ]; then PDF_ARG="--no-pdf"; else bin/build-pdf; fi
+EO_IMAGE=composer:2 bin/dk php dev/wordpress/build-package.php $PDF_ARG

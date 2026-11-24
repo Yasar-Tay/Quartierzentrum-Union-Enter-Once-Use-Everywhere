@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# PHPUnit in Docker. Usage: bin/phpunit [--filter Name]
+exec "$(dirname "$0")/dk" php vendor/bin/phpunit "$@"

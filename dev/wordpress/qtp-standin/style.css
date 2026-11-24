@@ -1,0 +1,12 @@
+/*
+Theme Name: QTP Stand-in (Enter Once test)
+Description: Local stand-in for the association's custom theme "qtp" and its event tool, built from the outside observations in IMPLEMENTATION_PLAN.md section 3.3. For tests only. Its field names and value formats are invented and deliberately odd; the Enter Once plugin does not know them and has to learn them with its wizard.
+Version: 1.0.0
+License: GPL-2.0-or-later
+Text Domain: qtp-standin
+*/
+body { font-family: system-ui, sans-serif; margin: 2rem; max-width: 70rem; }
+.qtp-article-preview { border: 1px solid #ccc; padding: .75rem; margin: .5rem 0; position: relative; }
+.qtp-article-date { margin-right: .5rem; font-weight: 600; }
+.qtp-article-cancelled span { background: #b00; color: #fff; padding: 0 .4rem; }
+.qtp-article-cancelled.qtp-vacation span { background: #c80; }

@@ -1,0 +1,45 @@
+# Dependencies: installed with bin/composer install and npm ci
+/vendor/
+node_modules/
+
+# Build output: bin/build-zip, bin/build-pdf, bin/build-package
+/dist/
+/build/
+
+# Test caches and results
+.phpunit.cache/
+.phpunit.result.cache
+*.cache
+
+# Third-party content that belongs to Quartierzentrum Union and must not be published here:
+# the two demo pages are copies of pages of union-basel.ch (made by widget/demo/build-pages.mjs
+# from a static copy of the site that is not part of this repository), and the Edge check writes
+# screenshots of those pages.
+/widget/demo/index.html
+/widget/demo/quartierzentrum-union/
+/widget/tests/edge-output/
+
+# Secrets and local configuration. A calendar address (ICS) is a secret: never commit one.
+.env
+.env.*
+!.env.example
+wp-config.php
+*.state.json
+.claude/settings.local.json
+
+# Drift reports written during a run
+/bericht*.html
+/abgleich*.html
+
+# Logs, editors, operating systems
+*.log
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Crash dumps of Windows shell tools
+*.stackdump

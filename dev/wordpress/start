@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Starts the local test site, installs WordPress on first start, activates the stand-in theme and
+# the plugin, and seeds the stand-in data. Idempotent. Site: http://localhost:18471 (admin / enteronce-dev).
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/../.." && (pwd -W 2>/dev/null || pwd))"
+cd "$ROOT"
+export MSYS_NO_PATHCONV=1
+dc() { docker compose -f "$ROOT/docker-compose.yml" "$@"; }
+
+if [ ! -f vendor/autoload.php ]; then
+  bin/composer install --no-interaction
+fi
+
+dc up -d db wordpress
+echo "Waiting for WordPress files..."
+for i in $(seq 1 60); do
+  if dc exec -T wordpress test -f /var/www/html/wp-config.php 2>/dev/null; then break; fi
+  sleep 2
+done
+
+wp() { dc run --rm -T wpcli wp "$@"; }
+for i in $(seq 1 30); do
+  if wp db check >/dev/null 2>&1; then break; fi
+  sleep 2
+done
+
+if ! wp core is-installed >/dev/null 2>&1; then
+  wp core install --url=http://localhost:18471 --title="QTP Stand-in (lokal)" \
+    --admin_user=admin --admin_password=enteronce-dev --admin_email=admin@example.org --skip-email
+  wp option update timezone_string Europe/Zurich
+  wp option update date_format d.m.Y
+  wp option update time_format H:i
+fi
+wp rewrite structure '/%postname%/' --hard >/dev/null
+wp theme activate qtp-standin >/dev/null
+wp plugin activate enter-once-sync >/dev/null
+"$ROOT/dev/wordpress/seed"
+echo "Local site ready: http://localhost:18471  (admin / enteronce-dev)"

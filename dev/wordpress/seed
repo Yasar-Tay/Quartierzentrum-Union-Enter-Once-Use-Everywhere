@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Seeds the stand-in: taxonomy terms, the 16 centres, and the hand-entered Union records of
+# docs/dev/programme-page-notes.md. Removes all other events first. Plugin settings are not touched,
+# except that a local demo source is offered (see dev/wordpress/mu-plugins/enteronce-dev.php).
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/../.." && (pwd -W 2>/dev/null || pwd))"
+MSYS_NO_PATHCONV=1 docker compose -f "$ROOT/docker-compose.yml" run --rm -T wpcli \
+  wp eval 'qtp_standin_seed(true); echo "Seed done\n";'

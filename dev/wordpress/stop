@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Stops the local test site. Data is kept; dev/wordpress/reset deletes it.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/../.." && (pwd -W 2>/dev/null || pwd))"
+MSYS_NO_PATHCONV=1 docker compose -f "$ROOT/docker-compose.yml" down --remove-orphans

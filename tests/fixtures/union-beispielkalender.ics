@@ -1,0 +1,247 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+X-WR-CALNAME:Union Beispielkalender (Hackathon)
+BEGIN:VTIMEZONE
+TZID:W. Europe Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:union-deutschtreff@example
+SUMMARY:Offener Deutschtreff
+DTSTART;TZID=W. Europe Standard Time:20261119T150000
+DTEND;TZID=W. Europe Standard Time:20261119T170000
+RRULE:FREQ=WEEKLY;UNTIL=20270325T230000Z;BYDAY=TH
+EXDATE;TZID=W. Europe Standard Time:20261224T150000
+EXDATE;TZID=W. Europe Standard Time:20261231T150000
+LOCATION:Quartierraum\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Ba
+ sel
+DESCRIPTION:Gemeinsam Deutsch sprechen und neue Leute kennenlernen. Ohne An
+ meldung\, kostenlos.\n\n[event-type]\nname=Bildung\nname=Offener Treffpunk
+ t\n[/event-type]\n[tag]\nname=Deutschlernende\n[/tag]\n[tag]\nname=Erwachs
+ ene\n[/tag]
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-yoga@example
+SUMMARY:Yoga im Union
+DTSTART;TZID=W. Europe Standard Time:20261123T090000
+DTEND;TZID=W. Europe Standard Time:20261123T100000
+RRULE:FREQ=WEEKLY;UNTIL=20270329T230000Z;BYDAY=MO
+LOCATION:Oberer Saal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Bas
+ el
+DESCRIPTION:Sanftes Yoga für alle Niveaus. Matten sind vorhanden.\n\n[even
+ t-type]\nname=Bewegung\n[/event-type]\n[tag]\nname=Erwachsene\n[/tag]
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-yoga@example
+RECURRENCE-ID;TZID=W. Europe Standard Time:20261207T090000
+SUMMARY:Yoga im Union
+DTSTART;TZID=W. Europe Standard Time:20261207T100000
+DTEND;TZID=W. Europe Standard Time:20261207T110000
+LOCATION:Grosser Saal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Ba
+ sel
+DESCRIPTION:Sanftes Yoga für alle Niveaus. Heute ausnahmsweise später und
+  im Grossen Saal.\n\n[event-type]\nname=Bewegung\n[/event-type]\n[tag]\nna
+ me=Erwachsene\n[/tag]
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:1
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-kinderpiazza@example
+SUMMARY:Kinderpiazza
+DTSTART;TZID=W. Europe Standard Time:20261123T140000
+DTEND;TZID=W. Europe Standard Time:20261123T170000
+RRULE:FREQ=WEEKLY;COUNT=12;BYDAY=MO
+LOCATION:Grosser Saal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Ba
+ sel
+DESCRIPTION:Offener Spielnachmittag für Kinder mit Begleitung.\n\n[event-t
+ ype]\nname=Offener Treffpunkt\nname=Bewegung\nname=Kreativität\n[/event-t
+ ype]\n[tag]\nname=Familie\n[/tag]\n[tag]\nname=Kinder\n[/tag]\n[tag]\nname
+ =Babys & Kleinkinder\n[/tag]
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-seniorensport@example
+SUMMARY:Seniorensport
+DTSTART;TZID=W. Europe Standard Time:20261120T090000
+DTEND;TZID=W. Europe Standard Time:20261120T100000
+RRULE:FREQ=WEEKLY;UNTIL=20270326T230000Z;BYDAY=FR
+LOCATION:Oberer Saal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Bas
+ el
+DESCRIPTION:Bewegung in der Gruppe\, angepasst an jedes Alter.\n\n[event-ty
+ pe]\nname=Bewegung\n[/event-type]\n[tag]\nname=Senior:innen\n[/tag]
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-mittwochsbar-1125@example
+SUMMARY:MittwochsBAR im Union
+DTSTART;TZID=W. Europe Standard Time:20261125T190000
+DTEND;TZID=W. Europe Standard Time:20261125T230000
+LOCATION:Bistro Union\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Ba
+ sel
+DESCRIPTION:Live-Musik und Drinks im Bistro. Eintritt frei\, Kollekte.\n\n[
+ event-type]\nname=Musik\nname=Party\n[/event-type]\n[tag]\nname=Erwachsene
+ \n[/tag]\n[tag]\nname=Highlight\n[/tag]
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-brunch-1129@example
+SUMMARY:Brunch Atelier Cuisine Globale
+DTSTART;TZID=W. Europe Standard Time:20261129T090000
+DTEND;TZID=W. Europe Standard Time:20261129T143000
+LOCATION:Bistro Union\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Ba
+ sel
+DESCRIPTION:Brunch mit Gerichten aus aller Welt\, gekocht von Menschen aus 
+ dem Quartier.\n\n[event-type]\nname=Essen & Trinken\nname=Offener Treffpun
+ kt\n[/event-type]\n[tag]\nname=Familie\n[/tag]
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-listening-1126@example
+SUMMARY:Abgesagt: Listening-Session: Was uns inspiriert
+DTSTART;TZID=W. Europe Standard Time:20261126T210000
+DTEND;TZID=W. Europe Standard Time:20261126T233000
+LOCATION:Bistro Union\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Ba
+ sel
+DESCRIPTION:Fällt leider aus.\n\n[event-type]\nname=Musik\n[/event-type]
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:2
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CANCELLED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:FREE
+END:VEVENT
+BEGIN:VEVENT
+UID:union-theater-1127@example
+SUMMARY:Theater Niemandsland
+DTSTART;TZID=W. Europe Standard Time:20261127T180000
+DTEND;TZID=W. Europe Standard Time:20261127T220000
+LOCATION:Grosser Saal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Ba
+ sel
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-repaircafe-1205@example
+SUMMARY:Repair Café
+DTSTART;TZID=W. Europe Standard Time:20261205T130000
+DTEND;TZID=W. Europe Standard Time:20261205T170000
+LOCATION:Bühnensaal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Bas
+ el
+DESCRIPTION:Kaputte Geräte gemeinsam reparieren.\n\n[event-type]\nname=Kul
+ turr\n[/event-type]\n[tag]\nname=Erwachsene\n[/tag]\n[tag]\nname=Jugendlic
+ he\n[/tag]
+CATEGORIES:Öffentlich
+CLASS:PUBLIC
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-intern-team-1124@example
+SUMMARY:Teamsitzung Union
+DTSTART;TZID=W. Europe Standard Time:20261124T100000
+DTEND;TZID=W. Europe Standard Time:20261124T120000
+LOCATION:Quartierraum\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Ba
+ sel
+DESCRIPTION:Interne Sitzung\, Traktanden folgen.
+CATEGORIES:Intern
+CLASS:PRIVATE
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+BEGIN:VEVENT
+UID:union-intern-miete-1128@example
+SUMMARY:Raummiete: Private Geburtstagsfeier
+DTSTART;TZID=W. Europe Standard Time:20261128T170000
+DTEND;TZID=W. Europe Standard Time:20261128T235900
+LOCATION:Grosser Saal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Ba
+ sel
+DESCRIPTION:Mietvertrag unterschrieben\, Schlüsselübergabe 16:30.
+CATEGORIES:Intern
+CLASS:PRIVATE
+SEQUENCE:0
+DTSTAMP:20261117T120000Z
+LAST-MODIFIED:20261117T120000Z
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+END:VEVENT
+END:VCALENDAR

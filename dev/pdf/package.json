@@ -1,0 +1,14 @@
+{
+  "name": "enter-once-guides-pdf",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Renders the German guides in docs/de/ to PDF for the handover package (part of enter-once-sync). Build tool only.",
+  "license": "GPL-2.0-or-later",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "marked": "15.0.12"
+  }
+}

@@ -1,0 +1,1461 @@
+[
+  {
+    "id": "union:A1F00D02:2027-01-04",
+    "title": "Yoga im Union",
+    "start": "2027-01-04T09:00:00+01:00",
+    "end": "2027-01-04T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:A1F00D03:2027-01-06",
+    "title": "Kinderpiazza",
+    "start": "2027-01-06T15:00:00+01:00",
+    "end": "2027-01-06T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:A1F00D01:2027-01-07",
+    "title": "Offener Deutschtreff",
+    "start": "2027-01-07T15:00:00+01:00",
+    "end": "2027-01-07T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010001:2027-01-09",
+    "title": "Repair Café",
+    "start": "2027-01-09T14:00:00+01:00",
+    "end": "2027-01-09T17:00:00+01:00",
+    "all_day": false,
+    "room": "Foyer",
+    "location": "Foyer, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Defekte Geräte, Kleider oder Spielzeug? Wir reparieren gemeinsam. <a href=\"mailto:repair@example.org\">repair@example.org</a></p>",
+    "categories": [
+      "Kreativität"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Familie"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Repair_Cafe.jpg",
+      "alt": "Repair Café"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-01-11",
+    "title": "Yoga im Union",
+    "start": "2027-01-11T09:00:00+01:00",
+    "end": "2027-01-11T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:A1F00D03:2027-01-13",
+    "title": "Kinderpiazza",
+    "start": "2027-01-13T15:00:00+01:00",
+    "end": "2027-01-13T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:A1F00D01:2027-01-14",
+    "title": "Offener Deutschtreff",
+    "start": "2027-01-14T15:00:00+01:00",
+    "end": "2027-01-14T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010002:2027-01-15",
+    "title": "FreitagsBAR im Union",
+    "start": "2027-01-15T19:00:00+01:00",
+    "end": "2027-01-15T22:30:00+01:00",
+    "all_day": false,
+    "room": "Bistro Quartierraum",
+    "location": "Bistro Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Drinks, Musik von lokalen DJs und gute Gespräche.</p>",
+    "categories": [
+      "Musik",
+      "Party"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Highlight"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/FreitagsBAR.jpg",
+      "alt": "Bar mit warmem Licht und Gästen"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:B0010003:2027-01-16",
+    "title": "Winterflohmarkt im Innenhof",
+    "start": "2027-01-16T00:00:00+01:00",
+    "end": "2027-01-17T00:00:00+01:00",
+    "all_day": true,
+    "room": "Innenhof",
+    "location": "Innenhof",
+    "description_html": "<p>Stöbern, tauschen, verkaufen. Tische können bis Freitag reserviert werden.</p>",
+    "categories": [
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Familie",
+      "Highlight"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Winterflohmarkt.jpg",
+      "alt": "Winterflohmarkt im Innenhof"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-01-18",
+    "title": "Yoga im Union",
+    "start": "2027-01-18T09:00:00+01:00",
+    "end": "2027-01-18T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:A1F00D03:2027-01-20",
+    "title": "Kinderpiazza",
+    "start": "2027-01-20T15:00:00+01:00",
+    "end": "2027-01-20T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": true,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:A1F00D01:2027-01-21",
+    "title": "Offener Deutschtreff",
+    "start": "2027-01-21T15:00:00+01:00",
+    "end": "2027-01-21T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010004:2027-01-22",
+    "title": "Neujahrsapéro für die Nachbarschaft",
+    "start": "2027-01-22T18:30:00+01:00",
+    "end": "2027-01-22T20:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Wir stossen aufs neue Jahr an. Alle sind willkommen.</p>",
+    "categories": [
+      "Essen & Trinken",
+      "Austausch"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Highlight"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Neujahrsapero.jpg",
+      "alt": "Neujahrsapéro für die Nachbarschaft"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-01-25",
+    "title": "Yoga im Union",
+    "start": "2027-01-25T09:00:00+01:00",
+    "end": "2027-01-25T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:A1F00D03:2027-01-27",
+    "title": "Kinderpiazza",
+    "start": "2027-01-27T15:00:00+01:00",
+    "end": "2027-01-27T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:B0010005:2027-01-27",
+    "title": "Sprechstunde Sozialberatung",
+    "start": "2027-01-27T16:00:00+01:00",
+    "end": "2027-01-27T18:00:00+01:00",
+    "all_day": false,
+    "room": "Projektraum Rehovot",
+    "location": "Projektraum Rehovot, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Kostenlos und vertraulich, ohne Anmeldung.</p>",
+    "categories": [
+      "Beratung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Sozialberatung.jpg",
+      "alt": "Sprechstunde Sozialberatung"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:B0010006:2027-01-27",
+    "title": "Konzert: Trio Rheinwind",
+    "start": "2027-01-27T20:00:00+01:00",
+    "end": "2027-01-27T22:00:00+01:00",
+    "all_day": false,
+    "room": "Bühnensaal",
+    "location": "Bühnensaal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Jazz und Weltmusik, drei Instrumente, ein Abend.</p>",
+    "categories": [
+      "Musik"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Senior:innen"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Trio_Rheinwind.jpg",
+      "alt": ""
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D01:2027-01-28",
+    "title": "Offener Deutschtreff",
+    "start": "2027-01-28T15:00:00+01:00",
+    "end": "2027-01-28T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010007:2027-01-30",
+    "title": "Kinder-Theaterworkshop",
+    "start": "2027-01-30T10:00:00+01:00",
+    "end": "2027-01-30T12:00:00+01:00",
+    "all_day": false,
+    "room": "Bühnensaal",
+    "location": "Bühnensaal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Verkleiden, spielen, Geschichten erfinden. Ab 6 Jahren.</p>",
+    "categories": [
+      "Kreativität"
+    ],
+    "tags": [
+      "Kinder"
+    ],
+    "image": null,
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-02-01",
+    "title": "Yoga im Union",
+    "start": "2027-02-01T09:00:00+01:00",
+    "end": "2027-02-01T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:B0010008:2027-02-03",
+    "title": "Digital unterwegs: Online-Banking verstehen",
+    "start": "2027-02-03T14:30:00+01:00",
+    "end": "2027-02-03T16:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Ein Einstieg in sicheres Online-Banking. Bitte Smartphone mitbringen.</p>",
+    "categories": [
+      "Bildung",
+      "Beratung"
+    ],
+    "tags": [
+      "Senior:innen"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Online_Banking.jpg",
+      "alt": "Digital unterwegs: Online-Banking verstehen"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D03:2027-02-03",
+    "title": "Kinderpiazza",
+    "start": "2027-02-03T15:00:00+01:00",
+    "end": "2027-02-03T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:A1F00D01:2027-02-04",
+    "title": "Offener Deutschtreff",
+    "start": "2027-02-04T15:00:00+01:00",
+    "end": "2027-02-04T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010009:2027-02-05",
+    "title": "Spieleabend",
+    "start": "2027-02-05T19:00:00+01:00",
+    "end": "2027-02-05T22:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "",
+    "categories": [],
+    "tags": [
+      "Jugendliche",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Spieleabend.jpg",
+      "alt": "Spieleabend"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:B0010010:2027-02-06",
+    "title": "Konzert Terrible Two",
+    "start": "2027-02-06T20:00:00+01:00",
+    "end": "2027-02-06T22:30:00+01:00",
+    "all_day": false,
+    "room": "Bühnensaal",
+    "location": "Bühnensaal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Zwei Gitarren, viel Lärm. Eintritt frei, Hut geht rum.</p>",
+    "categories": [
+      "Musik"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Highlight"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Terrible_Two.jpg",
+      "alt": "Konzert Terrible Two"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-02-08",
+    "title": "Yoga im Union",
+    "start": "2027-02-08T09:00:00+01:00",
+    "end": "2027-02-08T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:A1F00D03:2027-02-10",
+    "title": "Kinderpiazza",
+    "start": "2027-02-10T15:00:00+01:00",
+    "end": "2027-02-10T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:A1F00D01:2027-02-11",
+    "title": "Offener Deutschtreff",
+    "start": "2027-02-11T15:00:00+01:00",
+    "end": "2027-02-11T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010011:2027-02-12",
+    "title": "Fasnachts-Party mit Guggenmusik",
+    "start": "2027-02-12T18:00:00+01:00",
+    "end": "2027-02-12T23:00:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Mit Verkleidung und Konfetti. Für Familien bis 20 Uhr, danach Erwachsenenparty.</p>",
+    "categories": [
+      "Party",
+      "Musik"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Familie",
+      "Highlight"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Fasnachts_Party.jpg",
+      "alt": "Fasnachts-Party mit Guggenmusik"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:B0010012:2027-02-13",
+    "title": "Wochenendkurs Siebdruck",
+    "start": "2027-02-13T09:00:00+01:00",
+    "end": "2027-02-14T17:00:00+01:00",
+    "all_day": false,
+    "room": "Projektraum Rehovot",
+    "location": "Projektraum Rehovot, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Zwei Tage drucken. Material ist inbegriffen. Anmeldung bis 5. Februar.</p>",
+    "categories": [
+      "Kreativität"
+    ],
+    "tags": [
+      "Jugendliche",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Siebdruck.jpg",
+      "alt": "Wochenendkurs Siebdruck"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-02-15",
+    "title": "Yoga im Union",
+    "start": "2027-02-15T09:00:00+01:00",
+    "end": "2027-02-15T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:B0010013:2027-02-17",
+    "title": "Café Austausch",
+    "start": "2027-02-17T14:00:00+01:00",
+    "end": "2027-02-17T16:00:00+01:00",
+    "all_day": false,
+    "room": null,
+    "location": null,
+    "description_html": "<p>Der Ort wird bei Anmeldung bekannt gegeben.</p>",
+    "categories": [
+      "Austausch",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Senior:innen"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Cafe_Austausch.jpg",
+      "alt": "Café Austausch"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D03:2027-02-17",
+    "title": "Kinderpiazza",
+    "start": "2027-02-17T15:00:00+01:00",
+    "end": "2027-02-17T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:A1F00D01:2027-02-18",
+    "title": "Offener Deutschtreff",
+    "start": "2027-02-18T15:00:00+01:00",
+    "end": "2027-02-18T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010014:2027-02-20",
+    "title": "Brunch Atelier Cuisine Globale",
+    "start": "2027-02-20T11:00:00+01:00",
+    "end": "2027-02-20T15:00:00+01:00",
+    "all_day": false,
+    "room": "Bistro Quartierraum",
+    "location": "Bistro Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Rezepte aus aller Welt, gekocht von Nachbarinnen und Nachbarn.</p>",
+    "categories": [
+      "Essen & Trinken"
+    ],
+    "tags": [
+      "Familie",
+      "Highlight"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Brunch_Cuisine_Globale.jpg",
+      "alt": "Brunch Atelier Cuisine Globale"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-02-22",
+    "title": "Yoga im Union",
+    "start": "2027-02-22T09:00:00+01:00",
+    "end": "2027-02-22T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:A1F00D03:2027-02-24",
+    "title": "Kinderpiazza",
+    "start": "2027-02-24T15:00:00+01:00",
+    "end": "2027-02-24T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:B0010015:2027-02-24",
+    "title": "Informationsveranstaltung zur Quartierentwicklung Klybeck: Wie wollen wir in Zukunft zusammenleben, arbeiten und die Freiräume im Quartier gemeinsam nutzen? Einladung an alle Anwohnerinnen und Anwohner",
+    "start": "2027-02-24T18:30:00+01:00",
+    "end": "2027-02-24T20:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Kurzreferate, danach Gespräche an Tischen. Übersetzung in Türkisch und Arabisch.</p>",
+    "categories": [
+      "Beratung",
+      "Austausch"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Quartierentwicklung.jpg",
+      "alt": "Informationsveranstaltung zur Quartierentwicklung Klybeck: Wie wollen wir in Zukunft zusammenleben, arbeiten und die Freiräume im Quartier gemeinsam nutzen? Einladung an alle Anwohnerinnen und Anwohner"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D01:2027-02-25",
+    "title": "Offener Deutschtreff",
+    "start": "2027-02-25T15:00:00+01:00",
+    "end": "2027-02-25T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010016:2027-02-26",
+    "title": "Theater Niemandsland",
+    "start": "2027-02-26T19:30:00+01:00",
+    "end": "2027-02-26T21:30:00+01:00",
+    "all_day": false,
+    "room": "Bühnensaal",
+    "location": "Bühnensaal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "",
+    "categories": [
+      "Kultur"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Highlight"
+    ],
+    "image": null,
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-03-01",
+    "title": "Yoga im Union",
+    "start": "2027-03-01T09:00:00+01:00",
+    "end": "2027-03-01T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:B0010017:2027-03-03",
+    "title": "Familiennachmittag mit Zauberer",
+    "start": "2027-03-03T15:00:00+01:00",
+    "end": "2027-03-03T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Staunen, mitmachen, Zvieri essen.</p>",
+    "categories": [
+      "Kultur",
+      "Kreativität"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Zauberer.jpg",
+      "alt": "Familiennachmittag mit Zauberer"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D03:2027-03-03",
+    "title": "Kinderpiazza",
+    "start": "2027-03-03T15:00:00+01:00",
+    "end": "2027-03-03T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:A1F00D01:2027-03-04",
+    "title": "Offener Deutschtreff",
+    "start": "2027-03-04T15:00:00+01:00",
+    "end": "2027-03-04T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010018:2027-03-06",
+    "title": "Tag der offenen Tür",
+    "start": "2027-03-06T00:00:00+01:00",
+    "end": "2027-03-07T00:00:00+01:00",
+    "all_day": true,
+    "room": "",
+    "location": "",
+    "description_html": "<p>Das ganze Haus öffnet seine Türen: Führungen, Musik, Essen.</p><p><a href=\"https://example.org/offene-tuer\">Programm des Tages</a></p>",
+    "categories": [
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Familie",
+      "Highlight"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Tag_der_offenen_Tuer.jpg",
+      "alt": "Tag der offenen Tür"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-03-08",
+    "title": "Yoga im Union",
+    "start": "2027-03-08T09:00:00+01:00",
+    "end": "2027-03-08T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:A1F00D03:2027-03-10",
+    "title": "Kinderpiazza",
+    "start": "2027-03-10T15:00:00+01:00",
+    "end": "2027-03-10T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:B0010019:2027-03-10",
+    "title": "Nähwerkstatt für Anfängerinnen",
+    "start": "2027-03-10T18:00:00+01:00",
+    "end": "2027-03-10T20:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "",
+    "categories": [
+      "Kreativität"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Naehwerkstatt.jpg",
+      "alt": "Nähwerkstatt für Anfängerinnen"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D01:2027-03-11",
+    "title": "Offener Deutschtreff",
+    "start": "2027-03-11T15:00:00+01:00",
+    "end": "2027-03-11T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010020:2027-03-12",
+    "title": "Offene Bühne",
+    "start": "2027-03-12T20:00:00+01:00",
+    "end": "2027-03-12T23:00:00+01:00",
+    "all_day": false,
+    "room": "Bühnensaal",
+    "location": "Bühnensaal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Fällt leider aus. Wir melden uns mit einem neuen Datum.</p>",
+    "categories": [
+      "Musik",
+      "Kultur",
+      "Austausch"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Highlight"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offene_Buehne.jpg",
+      "alt": "Offene Bühne"
+    },
+    "cancelled": true,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-03-15",
+    "title": "Yoga im Union",
+    "start": "2027-03-15T09:00:00+01:00",
+    "end": "2027-03-15T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:A1F00D03:2027-03-17",
+    "title": "Kinderpiazza",
+    "start": "2027-03-17T15:00:00+01:00",
+    "end": "2027-03-17T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:B0010021:2027-03-17",
+    "title": "Kinderflohmarkt",
+    "start": "2027-03-17T16:00:00+01:00",
+    "end": "2027-03-17T18:00:00+01:00",
+    "all_day": false,
+    "room": "Foyer",
+    "location": "Foyer, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "",
+    "categories": [
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie"
+    ],
+    "image": null,
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D01:2027-03-18",
+    "title": "Offener Deutschtreff",
+    "start": "2027-03-18T15:00:00+01:00",
+    "end": "2027-03-18T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010022:2027-03-19",
+    "title": "Lesung: Geschichten aus dem Klybeck",
+    "start": "2027-03-19T19:00:00+01:00",
+    "end": "2027-03-19T20:30:00+01:00",
+    "all_day": false,
+    "room": "Bistro Quartierraum",
+    "location": "Bistro Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Anwohnerinnen lesen eigene Texte und Erinnerungen.</p>",
+    "categories": [
+      "Kultur"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Senior:innen"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Lesung.jpg",
+      "alt": "Lesung: Geschichten aus dem Klybeck"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:B0010023:2027-03-20",
+    "title": "Velo-Werkstatt",
+    "start": "2027-03-20T10:00:00+01:00",
+    "end": "2027-03-20T13:00:00+01:00",
+    "all_day": false,
+    "room": "Innenhof",
+    "location": "Innenhof",
+    "description_html": "",
+    "categories": [
+      "Bewegung",
+      "Kreativität"
+    ],
+    "tags": [
+      "Jugendliche",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Velo_Werkstatt.jpg",
+      "alt": "Velo-Werkstatt"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D02:2027-03-22",
+    "title": "Yoga im Union",
+    "start": "2027-03-22T09:00:00+01:00",
+    "end": "2027-03-22T10:00:00+01:00",
+    "all_day": false,
+    "room": "Oberer Saal",
+    "location": "Oberer Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Sanftes Yoga für alle Stufen. Bitte eigene Matte mitbringen.</p><ul><li>Dauer: 60 Minuten</li><li>Kosten: Kollekte</li></ul>",
+    "categories": [
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Yoga_im_Union.jpg",
+      "alt": "Menschen auf Yogamatten in einem hellen Saal"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D02"
+  },
+  {
+    "id": "union:A1F00D03:2027-03-24",
+    "title": "Kinderpiazza",
+    "start": "2027-03-24T15:00:00+01:00",
+    "end": "2027-03-24T17:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  },
+  {
+    "id": "union:A1F00D01:2027-03-25",
+    "title": "Offener Deutschtreff",
+    "start": "2027-03-25T15:00:00+01:00",
+    "end": "2027-03-25T17:00:00+01:00",
+    "all_day": false,
+    "room": "Quartierraum",
+    "location": "Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Deutsch sprechen in lockerer Runde, mit Kaffee und Tee. Keine Anmeldung nötig.</p><p>Leitung: Team Union.</p>",
+    "categories": [
+      "Bildung",
+      "Offener Treffpunkt"
+    ],
+    "tags": [
+      "Deutschlernende",
+      "Erwachsene"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Offener_Deutschtreff.jpg",
+      "alt": "Offener Deutschtreff"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D01"
+  },
+  {
+    "id": "union:B0010024:2027-03-27",
+    "title": "Salsa-Nacht",
+    "start": "2027-03-27T19:00:00+01:00",
+    "end": "2027-03-27T23:30:00+01:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Schnupperkurs um 19 Uhr, danach tanzen bis spät.</p>",
+    "categories": [
+      "Party",
+      "Bewegung"
+    ],
+    "tags": [
+      "Erwachsene",
+      "Highlight"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Salsa_Nacht.jpg",
+      "alt": "Salsa-Nacht"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:B0010025:2027-03-28",
+    "title": "Sonntagsbrunch zur Zeitumstellung",
+    "start": "2027-03-28T11:00:00+02:00",
+    "end": "2027-03-28T14:00:00+02:00",
+    "all_day": false,
+    "room": "Bistro Quartierraum",
+    "location": "Bistro Quartierraum, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Heute ist eine Stunde weniger Schlaf, dafür mehr Brunch.</p>",
+    "categories": [
+      "Essen & Trinken"
+    ],
+    "tags": [
+      "Familie"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Sonntagsbrunch.jpg",
+      "alt": "Sonntagsbrunch zur Zeitumstellung"
+    },
+    "cancelled": false,
+    "series_id": null
+  },
+  {
+    "id": "union:A1F00D03:2027-03-31",
+    "title": "Kinderpiazza",
+    "start": "2027-03-31T15:00:00+02:00",
+    "end": "2027-03-31T17:30:00+02:00",
+    "all_day": false,
+    "room": "Grosser Saal",
+    "location": "Grosser Saal, Quartierzentrum Union, Klybeckstrasse 95, 4057 Basel",
+    "description_html": "<p>Spielen, basteln und Freunde treffen. Kinder unter 7 Jahren kommen in Begleitung.</p>",
+    "categories": [
+      "Kreativität",
+      "Offener Treffpunkt",
+      "Bewegung"
+    ],
+    "tags": [
+      "Kinder",
+      "Familie",
+      "Babys & Kleinkinder"
+    ],
+    "image": {
+      "url": "https://media.example.org/events/Kinderpiazza.jpg",
+      "alt": "Kinderpiazza"
+    },
+    "cancelled": false,
+    "series_id": "union:A1F00D03"
+  }
+]

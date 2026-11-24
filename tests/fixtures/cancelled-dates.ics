@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:-//Enter Once//Handmade test fixture//DE
+VERSION:2.0
+X-WR-CALNAME:Fixture cancelled dates (invented data)
+BEGIN:VTIMEZONE
+TZID:W. Europe Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:fixture-tanz@example.org
+SUMMARY:Tanznachmittag
+DTSTART;TZID=W. Europe Standard Time:20270105T140000
+DTEND;TZID=W. Europe Standard Time:20270105T160000
+RRULE:FREQ=WEEKLY;UNTIL=20270330T150000Z;BYDAY=TU
+LOCATION:Grosser Saal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Basel
+DESCRIPTION:Tanzen zu Musik aus allen Zeiten.\n\n[event-type]\nname=Bewegung\n[/event-type]\n[tag]\nname=Senior:innen\n[/tag]
+CLASS:PUBLIC
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-tanz@example.org
+RECURRENCE-ID;TZID=W. Europe Standard Time:20270119T140000
+SUMMARY:Tanznachmittag
+DTSTART;TZID=W. Europe Standard Time:20270119T140000
+DTEND;TZID=W. Europe Standard Time:20270119T160000
+LOCATION:Grosser Saal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Basel
+DESCRIPTION:Fällt aus.
+STATUS:CANCELLED
+CLASS:PUBLIC
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-tanz@example.org
+RECURRENCE-ID;TZID=W. Europe Standard Time:20270202T140000
+SUMMARY:Abgesagt: Tanznachmittag
+DTSTART;TZID=W. Europe Standard Time:20270202T140000
+DTEND;TZID=W. Europe Standard Time:20270202T160000
+LOCATION:Grosser Saal\, Quartierzentrum Union\, Klybeckstrasse 95\, 4057 Basel
+DESCRIPTION:Fällt wegen Krankheit aus.
+CLASS:PUBLIC
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-vortrag@example.org
+SUMMARY:cancelled: Vortrag Stadtgeschichte
+DTSTART;TZID=W. Europe Standard Time:20270121T190000
+DTEND;TZID=W. Europe Standard Time:20270121T203000
+LOCATION:Bühnensaal
+DESCRIPTION:Ein Abend über das Klybeckquartier.\n\n[event-type]\nname=Kulturx\n[/event-type]
+CLASS:PUBLIC
+STATUS:CONFIRMED
+DTSTAMP:20261201T100000Z
+END:VEVENT
+END:VCALENDAR

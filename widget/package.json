@@ -1,0 +1,19 @@
+{
+  "name": "enter-once-widget",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Calendar widget for union-basel.ch (part of enter-once-sync). Dev dependencies only; the widget itself has none.",
+  "license": "GPL-2.0-or-later",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node demo/serve.mjs",
+    "demo:dead": "node demo/serve.mjs --dead",
+    "check:edge": "node tests/edge-check.mjs"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.0",
+    "jsdom": "^25.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WordPress integration tests. Run inside the local site's container: dev/wordpress/test -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../../vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="bootstrap.php"
+         colors="true"
+         cacheResult="false"
+         failOnWarning="true"
+         failOnRisky="true"
+         displayDetailsOnTestsThatTriggerWarnings="true"
+         displayDetailsOnTestsThatTriggerErrors="true"
+         displayDetailsOnSkippedTests="true"
+         executionOrder="default">
+    <testsuites>
+        <testsuite name="WordPress">
+            <directory>.</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+# Checks dist/enter-once-uebergabe.zip (built by bin/build-package):
+#  1. the plugin zip inside is identical to dist/enter-once-sync.zip;
+#  2. the eight German guides are in anleitungen/, and so is a PDF of each that was made from the
+#     current text (skipped with EO_NO_PDF=1, for a package built without PDFs);
+#  3. the drift command in abgleichsbericht/ runs in a plain php:8.1-cli container that has only that
+#     folder mounted, on a fixture calendar and page copied in for this test only, and writes a report;
+#  4. no file contains a real calendar address (dev/wordpress/package-scan.php).
+# The package is unpacked into dist/.package-check/, which is removed afterwards.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/../.." && (pwd -W 2>/dev/null || pwd))"
+cd "$ROOT"
+PKG=dist/enter-once-uebergabe.zip
+[ -f "$PKG" ] || { echo "$PKG missing: run bin/build-package"; exit 1; }
+CHECK=dist/.package-check
+rm -rf "$CHECK"
+mkdir -p "$CHECK"
+trap 'rm -rf "$ROOT/$CHECK"' EXIT
+
+EO_IMAGE=composer:2 bin/dk php -r '$z = new ZipArchive(); if ($z->open($argv[1]) !== true || !$z->extractTo($argv[2])) { exit(1); } echo "unpacked ", $z->numFiles, " files\n";' "$PKG" "$CHECK/pkg"
+
+cmp "$CHECK/pkg/enter-once-sync.zip" dist/enter-once-sync.zip
+echo "plugin zip inside the package is identical to dist/enter-once-sync.zip: OK"
+
+GUIDES=$(ls "$CHECK/pkg/anleitungen"/*.md | wc -l | tr -d ' ')
+[ "$GUIDES" = "8" ] || { echo "FAIL: $GUIDES guides instead of 8"; exit 1; }
+for g in docs/de/*.md; do cmp "$g" "$CHECK/pkg/anleitungen/$(basename "$g")"; done
+echo "8 guides in anleitungen/: OK"
+if [ "${EO_NO_PDF:-}" = "1" ]; then
+  [ -z "$(ls "$CHECK/pkg/anleitungen"/*.pdf 2>/dev/null)" ] || { echo "FAIL: EO_NO_PDF=1 but the package contains PDFs"; exit 1; }
+  echo "PDF guides: skipped (EO_NO_PDF=1)"
+else
+  PDFS=$(ls "$CHECK/pkg/anleitungen"/*.pdf 2>/dev/null | wc -l | tr -d ' ')
+  [ "$PDFS" = "8" ] || { echo "FAIL: $PDFS PDF guides instead of 8 (run bin/build-package, or set EO_NO_PDF=1)"; exit 1; }
+  for g in docs/de/*.md; do
+    p="$(basename "$g" .md).pdf"
+    [ "$(head -c 5 "$CHECK/pkg/anleitungen/$p")" = "%PDF-" ] || { echo "FAIL: $p is not a PDF"; exit 1; }
+    cmp "dist/pdf/$p" "$CHECK/pkg/anleitungen/$p"
+  done
+  (cd docs/de && sha256sum -c --quiet ../../dist/pdf/quellen.sha256) || { echo "FAIL: a PDF was made from an older text: run bin/build-package"; exit 1; }
+  echo "8 PDF guides in anleitungen/, made from the current text: OK"
+fi
+for f in LIESMICH.txt abgleichsbericht/LIESMICH.txt abgleichsbericht/enteronce-drift abgleichsbericht/bin/enteronce-drift abgleichsbericht/vendor/autoload.php quellcode/composer.json quellcode/composer.lock quellcode/AGENTS.md quellcode/docs/dev/wordpress.md quellcode/tests/WordPress/WpTestCase.php quellcode/widget/enteronce-widget.js; do
+  [ -s "$CHECK/pkg/$f" ] || { echo "FAIL: $f missing"; exit 1; }
+done
+cmp bin/enteronce-drift "$CHECK/pkg/abgleichsbericht/bin/enteronce-drift"
+[ -z "$(ls -d "$CHECK"/pkg/abgleichsbericht/tests "$CHECK"/pkg/abgleichsbericht/composer.json 2>/dev/null)" ] || { echo "FAIL: development files in abgleichsbericht/"; exit 1; }
+grep -Eq "anleitungen/Begleitbrief\.(md|pdf)" "$CHECK/pkg/LIESMICH.txt" || { echo "FAIL: LIESMICH.txt does not point to the Begleitbrief"; exit 1; }
+LINES=$(wc -l < "$CHECK/pkg/LIESMICH.txt" | tr -d ' ')
+[ "$LINES" -le 10 ] || { echo "FAIL: LIESMICH.txt has $LINES lines"; exit 1; }
+echo "package layout: OK"
+
+# The drift tool, alone: only abgleichsbericht/ is mounted; test files are copied in and removed afterwards.
+DRIFT="$CHECK/pkg/abgleichsbericht"
+mkdir -p "$DRIFT/_test"
+cp tests/fixtures/programm/drift-calendar.ics "$DRIFT/_test/kalender.ics"
+cp tests/fixtures/programm/programm-union-reconstructed.html "$DRIFT/_test/programm.html"
+DRIFT_ABS="$(cd "$DRIFT" && (pwd -W 2>/dev/null || pwd))"
+MSYS_NO_PATHCONV=1 docker run --rm -v "$DRIFT_ABS:/bericht" -w /bericht php:8.1-cli \
+  php enteronce-drift _test/kalender.ics 52 _test/bericht.html --page-file=_test/programm.html --now=2026-11-23T00:00
+grep -q "<html" "$DRIFT/_test/bericht.html" || { echo "FAIL: no report written"; exit 1; }
+echo "drift report written by plain php:8.1-cli with only abgleichsbericht/ mounted: OK"
+rm -rf "$DRIFT/_test"
+
+EO_IMAGE=composer:2 bin/dk php dev/wordpress/package-scan.php "$CHECK/pkg"
+echo "Package check OK"

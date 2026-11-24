@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Installs dist/enter-once-sync.zip on a clean WordPress and activates it. The clean site is a copy of
+# the local WordPress core in a temporary folder of the WP-CLI container, with its own table prefix
+# (clean_) in the local database; it is removed afterwards. No network.
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/../.." && (pwd -W 2>/dev/null || pwd))"
+[ -f "$ROOT/dist/enter-once-sync.zip" ] || { echo "dist/enter-once-sync.zip missing: run bin/build-zip"; exit 1; }
+MSYS_NO_PATHCONV=1 docker compose -f "$ROOT/docker-compose.yml" run --rm -T --entrypoint sh wpcli \
+  /var/www/html/wp-content/plugins/enter-once-sync/dev/wordpress/clean-install.sh

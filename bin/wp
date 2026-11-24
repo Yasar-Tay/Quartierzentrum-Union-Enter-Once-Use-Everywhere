@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# WP-CLI against the local test site (docker-compose.yml). Usage: bin/wp <wp-cli arguments>
+# Example: bin/wp enteronce sync --source=union
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && (pwd -W 2>/dev/null || pwd))"
+TTY=""
+[ -t 0 ] && [ -t 1 ] || TTY="-T"
+MSYS_NO_PATHCONV=1 exec docker compose -f "$ROOT/docker-compose.yml" run --rm $TTY wpcli wp "$@"

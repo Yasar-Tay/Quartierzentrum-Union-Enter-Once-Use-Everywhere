@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+PRODID:-//Enter Once//Handmade test fixture//DE
+VERSION:2.0
+X-WR-CALNAME:Fixture series split by this-and-following, Outlook style (invented data)
+BEGIN:VEVENT
+UID:fixture-chor-part1@example.org
+SUMMARY:Quartierchor
+DTSTART;TZID=Europe/Zurich:20261208T190000
+DTEND;TZID=Europe/Zurich:20261208T203000
+RRULE:FREQ=WEEKLY;UNTIL=20270112T225959Z;BYDAY=TU
+LOCATION:Bühnensaal
+DESCRIPTION:Singen ohne Vorkenntnisse.\n\n[event-type]\nname=Musik\n[/event-type]
+CLASS:PUBLIC
+DTSTAMP:20261201T100000Z
+END:VEVENT
+BEGIN:VEVENT
+UID:fixture-chor-part2@example.org
+SUMMARY:Quartierchor
+DTSTART;TZID=Europe/Zurich:20270119T193000
+DTEND;TZID=Europe/Zurich:20270119T210000
+RRULE:FREQ=WEEKLY;UNTIL=20270330T225959Z;BYDAY=TU
+LOCATION:Bühnensaal
+DESCRIPTION:Singen ohne Vorkenntnisse. Neu ab 19:30 Uhr.\n\n[event-type]\nname=Musik\n[/event-type]
+CLASS:PUBLIC
+DTSTAMP:20261201T100000Z
+END:VEVENT
+END:VCALENDAR

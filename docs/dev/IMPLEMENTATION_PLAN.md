@@ -1061,5 +1061,5 @@ Each of these can only be checked by, or together with, Union or the association
 1. Send Union the e-mail with the questions of section 10 (draft: `E-Mail-an-Union.md` next to this file). Q-01 and Q-02 decide the delivery route.
 2. Do the phase 0 Google experiment, or ask Union to: it produces the missing test fixture and tells whether the starting source works.
 3. Decide with the association how new event images get their centre (12.3).
-4. Fill in the placeholders for name and contact in `docs/de/Begleitbrief.md` and `readme.txt`, then rebuild the package with `bin/build-package` (it also renders the PDFs; this needs Node and Edge, Chrome or Chromium on the machine, besides Docker).
+4. Done on 24 November 2026: name, contact, place and date are filled in in `docs/de/Begleitbrief.md` and `readme.txt`, and the package was rebuilt. After any later change to a guide, rebuild with `bin/build-package` (it also renders the PDFs; this needs Node and Edge, Chrome or Chromium on the machine, besides Docker).
 5. Have someone who did not write the guides follow them once on a clean WordPress.

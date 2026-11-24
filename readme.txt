@@ -63,7 +63,7 @@ Das Plugin wird ohne jede Gewährleistung bereitgestellt, auch ohne die stillsch
 
 Dieses Plugin wurde nach dem AI for Access Hackathon (Basel, 20.–21. November 2026) von einer freiwilligen Person gebaut, als Geschenk an das Quartierzentrum Union und den Verband Quartiertreffpunkte Basel.
 
-Autorin oder Autor: [Name]
+Autorin oder Autor: Yasar TAY
 
 Betrieb und Pflege liegen beim Quartierzentrum Union und beim Verband; die Entwicklerin oder der Entwickler hilft auf Anfrage.
 

@@ -1,6 +1,6 @@
 # Begleitbrief
 
-[Ort], [Datum]
+Basel, 24. November 2026
 
 An das Quartierzentrum Union und den Verband Quartiertreffpunkte Basel
 
@@ -48,10 +48,10 @@ Das Plugin ist freie Software unter der GNU General Public License, Version 2 od
 
 **Unterstützung**
 
-Auf Anfrage helfe ich gerne weiter: bei der Einrichtung, bei Fragen und, wenn etwas nicht stimmt, bei der Fehlersuche. Sie erreichen mich unter [Kontakt].
+Auf Anfrage helfe ich gerne weiter: bei der Einrichtung, bei Fragen und, wenn etwas nicht stimmt, bei der Fehlersuche. Sie erreichen mich unter yasartay@gmail.com.
 
 Ich wünsche Ihnen, dass es Ihnen Zeit für das schenkt, was zählt: das Quartier.
 
 Freundliche Grüsse
 
-[Name]
+Yasar TAY

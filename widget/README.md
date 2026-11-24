@@ -108,7 +108,7 @@ npm run demo          # http://127.0.0.1:8080/quartierzentrum-union/veranstaltun
 npm run demo:dead     # same, but the feed answers 503: shows the fallback message
 ```
 
-The demo shows the widget inside two pages of union-basel.ch. Those pages and the static copy of the site they are made from (`../../webflow-static`) belong to Union and are **not in the git repository**; the handover package for Union contains the two pages. Without them the feed and the widget files are still served, and the tests that need the copy are skipped (`npm test` reports them as skipped).
+The demo shows the widget inside two pages of union-basel.ch. Those pages and the static copy of the site they are made from (`../../webflow-static`) belong to Union and are **neither in the git repository nor in the handover package**. Without them the feed and the widget files are still served, and the tests that need the copy are skipped (`npm test` reports them as skipped).
 
 `demo/serve.mjs` is a small Node static server. It serves
 

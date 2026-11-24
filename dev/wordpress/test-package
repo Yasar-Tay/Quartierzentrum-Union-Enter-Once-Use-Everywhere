@@ -48,6 +48,9 @@ cmp bin/enteronce-drift "$CHECK/pkg/abgleichsbericht/bin/enteronce-drift"
 grep -Eq "anleitungen/Begleitbrief\.(md|pdf)" "$CHECK/pkg/LIESMICH.txt" || { echo "FAIL: LIESMICH.txt does not point to the Begleitbrief"; exit 1; }
 LINES=$(wc -l < "$CHECK/pkg/LIESMICH.txt" | tr -d ' ')
 [ "$LINES" -le 10 ] || { echo "FAIL: LIESMICH.txt has $LINES lines"; exit 1; }
+for f in quellcode/widget/demo/index.html quellcode/widget/demo/quartierzentrum-union quellcode/widget/tests/edge-output; do
+  [ ! -e "$CHECK/pkg/$f" ] || { echo "FAIL: $f is a copy of content of union-basel.ch and must not be in the package"; exit 1; }
+done
 echo "package layout: OK"
 
 # The drift tool, alone: only abgleichsbericht/ is mounted; test files are copied in and removed afterwards.

@@ -10,7 +10,9 @@
  *   abgleichsbericht/     the drift report, runnable with nothing but PHP 8.1: bin/enteronce-drift
  *                         (unchanged), a wrapper «enteronce-drift», src/Core, src/Drift, sabre/* and
  *                         an autoloader, LIESMICH.txt
- *   quellcode/            the full source without vendor/, node_modules/, dist/ and caches
+ *   quellcode/            the full source without vendor/, node_modules/, dist/, caches, and without the
+ *                         copies of pages of union-basel.ch that the widget demo generates (the package
+ *                         may be published; that content belongs to Union)
  *   LIESMICH.txt          what is where
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
@@ -192,7 +194,9 @@ TXT);
 // 4. The source.
 $sourceFiles = copyTree($root, $stage . '/quellcode', [
     'vendor', 'node_modules', 'dist', '.phpunit.cache', '.phpunit.result.cache', '*.cache', 'build',
-    '.git', '.idea', '.vscode', '.env', '.env.*', '*.log', '.DS_Store', 'Thumbs.db', '*.state.json',
+    '.git', '.idea', '.vscode', '.env', '.env.*', '*.log', '.DS_Store', 'Thumbs.db', '*.state.json', '*.stackdump',
+    // Generated from a copy of union-basel.ch; not ours to pass on (see .gitignore).
+    'widget/demo/index.html', 'widget/demo/quartierzentrum-union', 'widget/tests/edge-output',
 ]);
 
 // 5. What is where.

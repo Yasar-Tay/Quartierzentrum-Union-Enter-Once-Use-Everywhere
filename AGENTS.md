@@ -1,49 +1,52 @@
-# Rules for everyone working in this folder
+# Rules for coding agents and their operators
 
-This is the code for "Enter once, show everywhere": a WordPress plugin that syncs a neighbourhood centre's public calendar to an association website and feeds a calendar widget. Several sessions work here at the same time.
+This repository holds "Enter once, show everywhere": a WordPress plugin that syncs a neighbourhood centre's public calendar (ICS) to an association website, a public feed with a calendar widget for the centre's own website, and a drift report. `README.md` gives the overview. This file holds the rules that apply to every change, whether a person or an agent makes it.
 
-## The plan is binding
+## Read first
 
-Read `../IMPLEMENTATION_PLAN.md` before you start (a copy travels with the source as `docs/dev/IMPLEMENTATION_PLAN.md`; if only that copy is present, it is the plan). Its rules (`R-nn`), assumptions (`A-nn`), names (section 4.3), settings keys (section 6.6) and test expectations (section 8) are requirements. If the plan and your task brief disagree, the plan wins; say so in your report. If the plan is wrong or silent, choose the simplest behaviour consistent with it and say so in your report. Do not edit the plan.
+- `docs/dev/IMPLEMENTATION_PLAN.md` is the design. Its rules (`R-nn`), assumptions (`A-nn`), names (section 4.3), settings keys (section 6.6) and test expectations (section 8) are requirements. Section 12 says what was built and where it deviates from the plan.
+- If a change contradicts the plan, say so and change the plan in the same commit. If the plan is silent, choose the simplest behaviour consistent with it.
+- `docs/de/Testbericht.md` lists what has never been tested. Do not describe something as tested unless you ran the test, and keep that report true when you change behaviour.
 
-## Who owns what
+## Where things live
 
-Write only inside your own area. Read anything.
-
-| Area | Owner |
-|---|---|
-| `src/Core/`, `tests/Core/`, `tests/fixtures/*.ics`, `bin/enteronce-core`, `docs/dev/core-api.md` | core session (finished and checked; treat as read-only and report bugs instead of patching) |
-| `widget/` (everything, including its tests, demo and `package.json`) | widget session (finished and checked; read-only) |
-| `docs/de/` | documentation sessions |
-| `enter-once-sync.php`, `src/WordPress/`, `tests/WordPress/`, `composer.json`, `composer.lock`, `docker-compose.yml`, `dev/wordpress/`, `bin/build-zip`, `bin/wp`, `dist/`, `languages/`, `docs/dev/ui-labels.md`, `docs/dev/wordpress.md` | WordPress session |
-| `src/Drift/`, `tests/Drift/`, `tests/fixtures/programm/`, `bin/enteronce-drift`, `docs/dev/drift.md` | drift-report session. It must not edit `composer.json`; PSR-4 already maps `EnterOnce\Drift` to `src/Drift/`. |
-| `AGENTS.md`, `phpunit.xml.dist`, `docs/dev/programme-page-notes.md`, `bin/dk`, `bin/php`, `bin/composer`, `bin/phpunit` | the coordinating session; do not change |
-
-If you need a change outside your area, do not make it. Describe it in your final report.
+| Path | Content | Developer notes |
+|---|---|---|
+| `src/Core/`, `tests/Core/`, `tests/fixtures/*.ics`, `bin/enteronce-core` | Calendar logic without WordPress | `docs/dev/core-api.md` |
+| `enter-once-sync.php`, `src/WordPress/`, `tests/WordPress/`, `languages/`, `uninstall.php`, `readme.txt` | The plugin | `docs/dev/wordpress.md`, `docs/dev/ui-labels.md` |
+| `src/Drift/`, `tests/Drift/`, `tests/fixtures/programm/`, `bin/enteronce-drift` | The drift report | `docs/dev/drift.md`, `docs/dev/programme-page-notes.md` |
+| `widget/` | The calendar widget, its tests and demo | `widget/README.md` |
+| `docs/de/` | The German guides for the people who install, operate and use it | |
+| `dev/wordpress/`, `docker-compose.yml`, `bin/build-zip`, `bin/build-package` | Local test site with a stand-in for the association's event tool; builds and checks | `docs/dev/wordpress.md` |
+| `dev/pdf/`, `bin/build-pdf` | Renders the German guides to PDF | `docs/dev/wordpress.md`, section 10a |
 
 ## Tools
 
-- The host has no PHP. Use the wrappers, which run PHP 8.1 in Docker with this folder mounted at `/app`:
+- PHP is not needed on the host. The wrappers run PHP 8.1 in Docker with this folder mounted at `/app`:
   - `bin/php script.php`
   - `bin/composer install`
-  - `bin/phpunit` (after `bin/composer install`)
+  - `bin/phpunit` (unit tests of the core and the drift report, after `bin/composer install`)
   - `bin/dk <any command>`; set `EO_IMAGE` to use another image, for example `EO_IMAGE=php:8.3-cli bin/dk php -v`.
-- The shell is Git Bash on Windows. Paths contain a space (`Quartierzentrum Union`): always quote them.
-- Node 24 is installed on the host for JavaScript work.
+- `dev/wordpress/test` runs everything: unit tests, WordPress integration tests against the local site, the builds, a clean install of the zip and the package check. `cd widget && npm ci && npm test` runs the widget tests.
+- The local test site is for one user at a time. The integration tests delete its events and the plugin's options, so two runs at once produce false failures.
+- The scripts are Bash. On Windows use Git Bash, and quote paths that contain spaces.
+- Node 20 or newer for the widget tests and the PDF guides; Edge, Chrome or Chromium for the PDFs (`EO_NO_PDF=1` builds and checks the package without them).
 
 ## Hard limits
 
-- **Git: commit only when the project owner asks.** The folder is a git repository since 24 November 2026 and is meant for a public GitHub repository. Do not commit, push, rewrite history or add a remote on your own. Never commit a calendar address (it is a secret), a file from the parent folder, or the copied pages of union-basel.ch (`.gitignore` lists them and says why).
-- **No requests to the real sites or calendars.** Never fetch `qtp-basel.ch`, `union-basel.ch`, an Outlook or a Google calendar address. Tests must run offline. Network is allowed only to install dependencies (Packagist, npm, Docker images).
-- **Do not run `../webflow-static/_mirror.py`.** Do not modify anything in the parent folder.
-- **No personal data in new fixtures.** Use invented names and addresses. The two provided calendar files may be copied unchanged.
-- **Do not start other sessions.**
+- **No requests to the real sites or calendars.** Never fetch `qtp-basel.ch`, `union-basel.ch`, or an Outlook or Google calendar address while developing or testing. Tests run offline against fixtures. Network is allowed only to install dependencies (Packagist, npm, Docker images).
+- **The drift report does not run against the live programme page before the association has been told what it does** (plan rules R-40 to R-42). The site's own list request (`filter_events`) is not used without the association's agreement.
+- **Never commit a calendar address.** A published ICS address lets anyone who knows it read the whole calendar. It belongs in the plugin's settings and nowhere else.
+- **No content of union-basel.ch in the repository.** The widget demo uses copies of two of its pages; `.gitignore` keeps them out and says why. The tests that need them are skipped when they are missing.
+- **No personal data in new fixtures.** Use invented names and addresses.
+- **Git: commit, push or rewrite history only when the repository owner asks.**
 
 ## Code conventions
 
 - PHP 8.1 compatible, `declare(strict_types=1)`, PSR-12, PSR-4 with `EnterOnce\` mapped to `src/`.
-- `src/Core/` contains no WordPress function and makes no network or file-system call except reading a path it is given. Its input is ICS text; "now" and the window are parameters, never the system clock.
-- Code, comments and developer docs in English. Every text a user sees is German, in Swiss spelling (ss, never ß), through the text domain `enter-once-sync`.
+- `src/Core/` contains no WordPress function and makes no network or file-system call except reading a path it is given. Its input is ICS text; "now" and the window are parameters, never the system clock. `tests/Core/CorePurityTest.php` enforces this.
+- The widget stays one script and one stylesheet without runtime dependencies or a build step.
+- Code, comments and developer notes are English. Every text a user sees is German in Swiss spelling (ss, never ß), through the text domain `enter-once-sync`. New or changed labels go into `docs/dev/ui-labels.md`, and the German guides are updated with them.
 - Licence: GPL-2.0-or-later.
 
 ## Feed format (shared contract between the plugin and the widget)
@@ -68,14 +71,11 @@ If you need a change outside your area, do not make it. Describe it in your fina
 }
 ```
 
-`image` may be `null`. `series_id` is `null` for single events. The list is sorted by `start`.
+`image` may be `null`. `series_id` is `null` for single events. The list is sorted by `start`. Changing this format means changing the plugin, the widget and their tests together.
 
-## Your final report
+## Before you call a change done
 
-Write it in Turkish, because the project owner reads Turkish. Keep it short and factual:
-
-1. What you built, with the main file paths.
-2. Which tests you ran and their result, with the command.
-3. What is not done or not verified.
-4. Where you deviated from the plan or had to interpret it, and what you chose.
-5. Changes you need outside your area.
+1. `dev/wordpress/test` passes, and `npm test` in `widget/` if the widget or the feed changed.
+2. The German guides, `docs/dev/` and the plan say what the code now does.
+3. After a change to a guide, `bin/build-package` has been run, so that the PDFs and the handover package match the text.
+4. Your report says what changed, which tests you ran and with what result, what is not verified, and where you deviated from the plan.
